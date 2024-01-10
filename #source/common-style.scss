@@ -1,0 +1,55 @@
+
+
+/*Обнуляющие стили*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+html, body {
+   width:100%;
+   font-weight: 400; 
+   line-height:150%; 
+	font-size: 16px;
+   background-color: white; 
+   scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+	color: #141414;
+}
+
+ul, li {
+	list-style: none;
+}
+
+h1, h2, h3 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+nav, footer, header {
+   display: block;
+}
+
+.page {
+   display: flex;
+   flex-direction: column;
+
+   &__header {
+      height: 60px;
+      width: 100%;
+      background-color: red;
+   }
+   &__content {
+      min-height: 100vh;
+      height: 100%;
+      background-color: green;
+   }
+   &__footer {
+      height: 60px;
+      width: 100%;
+      background-color: red;
+   }
+}
