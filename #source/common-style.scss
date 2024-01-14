@@ -1,4 +1,16 @@
-
+$color-1: #D4C9B4;
+$color-2: #25330F;
+$color-3:  rgb(243,218,11);
+$color-4: #800000;
+$color-5: #929079;
+$color-6: #042D29;
+$transparent: #ffffff00;
+$color-7: rgb(255, 255, 255);
+$color-8: #a2a2a2;
+$color-9:#4b280a;
+$border: rgb(75, 40, 10, 0.8);
+$wave-1:#FFFAFA;
+$wave-2:#DCDCDC;
 
 /*Обнуляющие стили*/
 * {
@@ -8,11 +20,10 @@
 	box-sizing: border-box;
 }
 html, body {
-   width:100%;
+   width:fit-content;
    font-weight: 400; 
    line-height:150%; 
 	font-size: 16px;
-   background-color: white; 
    scroll-behavior: smooth;
 }
 a {
@@ -36,20 +47,25 @@ nav, footer, header {
 .page {
    display: flex;
    flex-direction: column;
+   width: 100%;
+
 
    &__header {
       height: 60px;
       width: 100%;
-      background-color: red;
+      background-color: $color-2;
    }
    &__content {
       min-height: 100vh;
+      width: 100%;
       height: 100%;
-      background-color: green;
+      background-color: $color-1;
    }
    &__footer {
       height: 60px;
       width: 100%;
-      background-color: red;
+      background-color: $color-2;
+      z-index: 10;
+      position: relative;
    }
 }
