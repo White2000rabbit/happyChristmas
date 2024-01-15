@@ -24,19 +24,13 @@
 }
 @keyframes snowmen {
    0% {
+      opacity: 0;
+      transform: scale(0.1) rotate(180deg);
 
    }
-   25% {
-
-   }
-   50% {
-
-   }
-   75% {
-
-   }
-   100%{
-      
+   100% {
+      opacity: 1;
+      transform: scale(1);
    }
 }
 .content {
@@ -62,6 +56,11 @@
    }
    &__snowmen {
       position:fixed;
+   }
+   &__sled span{
+      display: block;
+      width: 100px;
+      height: auto;
    }
 }
 .wave-1, .wave-2 {
@@ -104,12 +103,14 @@
      animation: snowfall #{5 + random(10)}s linear infinite;
    }
 }
+
 .circle-1, .circle-2, .circle-3 {
+   opacity: 0;
    position: relative;
    border-radius: 45%;
    background-color: $wave-1;
    border: 3px solid $color-6;
-      
+   
 }
 .circle-1 {
    width: 80px;
@@ -120,8 +121,11 @@
    box-shadow: 
       inset 3px -6px 1px $color-8,
       inset 10px -20px 4px $wave-2;
-      position:relative;
-   &::before {
+   position:relative;
+   animation: snowmen 6s 0.5s ease-in-out;
+   animation-fill-mode: forwards;
+      &::before {
+      opacity:0;
       position: absolute;
       content: '';
       width: 12px;
@@ -130,8 +134,11 @@
       left: 23px;
       border-radius: 50%;
       background-color: $color-6;
+      animation: snowmen 7s 0.5s ease-in-out;
+      animation-fill-mode: forwards;
    }
    &::after {
+      opacity:0;
       position: absolute;
       content: '';
       width: 10px;
@@ -140,10 +147,13 @@
       left: 43px;
       border-radius: 50%;
       background-color: $color-6;
+      animation: snowmen 7s 0.5s ease-in-out;
+      animation-fill-mode: forwards;
    }
 
 }  
 .circle-2 {
+   opacity:0;
    width: 120px;
    height: 120px;
    top: 200px;
@@ -152,24 +162,31 @@
    box-shadow: 
       inset -2px -5px 1px $color-8,
       inset 15px -25px 4px $wave-2;
+      animation: snowmen 4s 0.5s ease-in-out;
+      animation-fill-mode: forwards;
    &::before, 
    &::after {
       content:'';
       position: absolute;
       background-color: $color-4;
       border-radius:50%;
+      opacity:0;
    }
    &::before {
       top: 40px;
       width: 10px;
       height: 10px;
       left: 60px;
+      animation: snowmen 8s 1s ease-in-out;
+      animation-fill-mode: forwards;
    }
    &::after {
       top: 60px;
       width: 10px;
       height: 10px;
       left: 60px;
+      animation: snowmen 10s 1s ease-in-out;
+      animation-fill-mode: forwards;
    }
 
 }
@@ -182,9 +199,15 @@
    box-shadow: 
       inset -3px -10px 1px $color-8,
       inset 14px -30px 4px $wave-2;
+   animation: snowmen 1s 0.5s ease-in-out;
+   animation-fill-mode: forwards;
+
    &::before, &::after {
+      opacity:0;
       position: absolute;
       content: '';
+      animation: snowmen 7s 1s ease-in-out;
+      animation-fill-mode: forwards;
    }
    &::before {
       width: 120px;
@@ -208,15 +231,19 @@
    position: relative;
    z-index: 20;
   &::after {
+      opacity:0;
       content: '';
       position: absolute; 
       border-radius: 120px; 
       border: 15px solid transparent;
       border-left: 70px solid $color-3;
       top: -95px;
-      left: 127px;  
+      left: 127px; 
+      animation: snowmen 6s 0.5s ease-in-out;
+      animation-fill-mode: forwards;
   }
   &::before {
+   opacity:0;
    content:'';
    position: absolute;
    top: -96px;
@@ -225,6 +252,8 @@
    height: 30px;
    border-bottom: 4px solid $color-6;
    border-radius: 35%;
+   animation: snowmen 6s 0.5s ease-in-out;
+   animation-fill-mode: forwards;
   }
 }
 .calendar {
