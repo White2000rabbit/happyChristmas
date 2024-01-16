@@ -20,8 +20,8 @@ $wave-2:#DCDCDC;
 	box-sizing: border-box;
 }
 html, body {
-   width:fit-content;
-   font-style: 'Cormorant Upright';
+   width:100%;
+   font-family: 'Cormorant Upright';
    font-weight: 400; 
    line-height:150%; 
 	font-size: 16px;
@@ -55,11 +55,6 @@ nav, footer, header {
       height: 90px;
       width: 100%;
       background-color: $color-2;
-      display: flex;
-      justify-content: flex-end;
-      align-items:center;
-      padding: 40px;
-      margin: 0;
    }
    &__content {
       min-height: 100vh;
@@ -75,4 +70,58 @@ nav, footer, header {
       position: relative;
    }
 }
+.navigation {
+   &__list {
+      display: flex;
+      justify-content: flex-end;
+      gap: 70px;
+      align-items:center;
+      padding: 20px 40px;
+      margin: 0;
+   }
+}
+.buttons__home {
+   width: 13rem;
+   height: 40px;
+   padding: 5px;
+   background-color: $wave-2;
+   text-align: center;
+   border: 1px solid $border;
+   position: relative;
+   display: flex;
+   justify-content: center;
 
+   & span {
+      display: block;
+      width: 10px;
+      height:10px;
+      opacity: 1;
+
+   }
+   &:hover {
+   background-color: $color-3;
+   transition: 300ms ease-in-out;
+}
+   &:hover::after {
+   opacity:1;
+   transition: 300ms ease-in-out;
+}
+   &:hover span {
+   opacity:0;
+   transition: 300ms ease-in-out;
+}
+}
+
+.buttons__social {
+   color: $wave-2;
+   width: 70px;
+   height: 70px;
+   border-radius:50%;
+   padding: 15px;
+   font-size: 32px;
+
+   &:hover {
+      color: $color-3;
+      transition: 300ms ease-in-out;
+   }
+}

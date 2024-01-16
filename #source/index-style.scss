@@ -1,6 +1,7 @@
 @import 'common-style.scss';
 
-.page {
+.content {
+    background-color: $color-1;
    background: linear-gradient(
       rgba(255,255,255, 0) .9em, rgba(0, 0, 0, .15) 1em)
     0 0,
@@ -9,4 +10,16 @@
     0 0;
   background-size: 1em 1em;
   background-color: $color-1;
+}
+
+//Кнопка
+.buttons__home {
+  &::after {
+  position:absolute;
+  content:'Адвент-календарь';
+  top:5px;
+  left:36px;
+  font-size: 18px;
+  opacity: 0;
+  }
 }
