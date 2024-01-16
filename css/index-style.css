@@ -12,6 +12,7 @@ html, body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  font-style: "Cormorant Upright";
   font-weight: 400;
   line-height: 150%;
   font-size: 16px;
@@ -74,57 +75,6 @@ nav, footer, header {
   background-color: #25330F;
   z-index: 10;
   position: relative;
-}
-
-.button {
-  width: 13rem;
-  height: 40px;
-  padding: 5px;
-  background-color: #DCDCDC;
-  text-align: center;
-  border: 1px solid rgba(75, 40, 10, 0.8);
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.button span {
-  display: block;
-  width: 10px;
-  height: 10px;
-  opacity: 1;
-}
-
-.button::after {
-  position: absolute;
-  content: "Нарядить елку";
-  top: 2px;
-  left: 24px;
-  font-size: 18px;
-  text-transform: uppercase;
-  opacity: 0;
-}
-
-.button:hover {
-  background-color: rgb(243, 218, 11);
-  -webkit-transition: 300ms ease-in-out;
-  transition: 300ms ease-in-out;
-}
-
-.button:hover::after {
-  opacity: 1;
-  -webkit-transition: 300ms ease-in-out;
-  transition: 300ms ease-in-out;
-}
-
-.button:hover span {
-  opacity: 0;
-  -webkit-transition: 300ms ease-in-out;
-  transition: 300ms ease-in-out;
 }
 
 .page {
