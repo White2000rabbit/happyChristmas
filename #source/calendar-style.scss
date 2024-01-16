@@ -42,7 +42,37 @@
       offset-distance: 100%;
    }
 }
-
+@keyframes jumping {
+   0% {
+      transform-origin: right, bottom;
+      transform: rotate(0deg);
+   }
+   20% {
+      transform-origin: right, bottom;
+      transform: rotate(15deg);
+   }
+   40% {
+      transform-origin: right, bottom;
+      transform: rotate(23deg);
+   }
+   40% {
+      transform-origin: right, bottom;
+      transform: rotate(35deg);
+   }
+   60% {
+      transform-origin: right, bottom;
+      transform: rotate(23deg);
+   }
+   80% {
+      transform-origin: right, bottom;
+      transform: rotate(15deg);
+   }
+   100% {
+      transform-origin: right, bottom;
+      transform: rotate(0)
+   }
+   
+}
 .content {
    background-color: $color-8;
    z-index: 0;
@@ -86,23 +116,38 @@
       z-index: 3;
    }
    &__deer img{
-      margin-top: 40px;
-      offset-path: path("M1504,193 C438,26 190,10 -346,56");
-      offset-rotate: reverse;
-      animation: move-sled 5s 8s linear infinite;
-      width: 300px;
-      height: 300px;
-   }
-   &__deer img{
-      margin-top: 40px;
-      offset-path: path("M1504,193 C438,26 190,10 -346,56");
-      offset-rotate: reverse;
-      animation: move-sled 5s 8s linear infinite;
-      width: 300px;
-      height: 300px;
+      
    }
 }
-
+.deer-1 img {
+   margin-top: 40px;
+      width: 300px;
+      height: 300px;
+   offset-path: path("M1504,193 C438,26 150,10 -346,56");
+   offset-rotate: reverse;
+   animation: move-sled 10s 2s ease-in-out infinite,
+               jumping 1s 2s ease-in-out infinite forwards;
+}
+.deer-2 img {
+   opacity:0.8;
+   margin-top: 30px;
+      width: 200px;
+      height: 200px;
+   offset-path: path("M1504,193 C438,26 120,10 -346,56");
+      offset-rotate: reverse;
+      animation: move-sled 8s 4s ease-in-out infinite,
+                  jumping 1s 2s ease-in-out infinite forwards; 
+}
+.deer-3 img {
+   opacity: 0.8;
+   margin-top: 50px;
+      width: 300px;
+      height: 300px;
+   offset-path: path("M1504,193 C438,26 190,10 -346,56");
+   offset-rotate: reverse;
+   animation:  move-sled 9s 6s ease-in-out infinite,
+               jumping 1s 2s ease-in infinite forwards;
+}
 .wave-1, .wave-2 {
    position: fixed;
    width: 100%;
