@@ -211,6 +211,90 @@ nav, footer, header {
     height: 100vh;
   }
 }
+@-webkit-keyframes jump {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  20% {
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px);
+  }
+  40% {
+    -webkit-transform: translateY(300px);
+            transform: translateY(300px);
+  }
+  60% {
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px);
+  }
+  80% {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+  100% {
+    -webkit-transform: translateY(400px) rotate(360deg);
+            transform: translateY(400px) rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes jump {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  20% {
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px);
+  }
+  40% {
+    -webkit-transform: translateY(300px);
+            transform: translateY(300px);
+  }
+  60% {
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px);
+  }
+  80% {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+  100% {
+    -webkit-transform: translateY(400px) rotate(360deg);
+            transform: translateY(400px) rotate(360deg);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes gift-jump {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px);
+  }
+}
+@keyframes gift-jump {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px);
+  }
+}
 .content {
   height: 100%;
   width: 100%;
@@ -221,6 +305,13 @@ nav, footer, header {
   background-color: #D4C9B4;
 }
 
+.buttons__home {
+  right: 60px;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-animation: jump 3s 2s ease-in-out forwards;
+          animation: jump 3s 2s ease-in-out forwards;
+}
 .buttons__home::after {
   position: absolute;
   content: "Адвент-календарь";
@@ -228,6 +319,31 @@ nav, footer, header {
   left: 36px;
   font-size: 18px;
   opacity: 0;
+}
+
+.gift {
+  width: 50px;
+  height: 50px;
+  font-size: 100px;
+  padding: 5px;
+  position: relative;
+  opacity: 0;
+  left: 1100px;
+  -webkit-transform: translateY(200px) rotate(360deg);
+          transform: translateY(200px) rotate(360deg);
+  -webkit-animation: gift-jump 1s 4s ease-in-out forwards;
+          animation: gift-jump 1s 4s ease-in-out forwards;
+  z-index: 500;
+}
+
+.gift span {
+  display: block;
+  font-size: 100px;
+}
+
+.gift__link:hover {
+  -webkit-transform: scale(3) rotate(360deg);
+          transform: scale(3) rotate(360deg);
 }
 
 .animation {
