@@ -295,6 +295,28 @@ nav, footer, header {
             transform: translateY(400px);
   }
 }
+@-webkit-keyframes isVisible {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes isVisible {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .content {
   height: 100%;
   width: 100%;
@@ -309,8 +331,8 @@ nav, footer, header {
   right: 60px;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
-  -webkit-animation: jump 3s 2s ease-in-out forwards;
-          animation: jump 3s 2s ease-in-out forwards;
+  -webkit-animation: jump 3s 6s ease-in-out forwards;
+          animation: jump 3s 6s ease-in-out forwards;
 }
 .buttons__home::after {
   position: absolute;
@@ -331,9 +353,21 @@ nav, footer, header {
   left: 1100px;
   -webkit-transform: translateY(200px) rotate(360deg);
           transform: translateY(200px) rotate(360deg);
-  -webkit-animation: gift-jump 1s 4s ease-in-out forwards;
-          animation: gift-jump 1s 4s ease-in-out forwards;
+  -webkit-animation: gift-jump 1s 8s ease-in-out forwards;
+          animation: gift-jump 1s 8s ease-in-out forwards;
   z-index: 500;
+}
+.gift::before {
+  position: absolute;
+  content: "Кликни сюда:)";
+  font-size: 18px;
+  top: 50;
+  left: -50px;
+  width: 20px;
+  height: 2px;
+  opacity: 0;
+  -webkit-animation: isVisible 2s 1s ease-in-out;
+          animation: isVisible 2s 1s ease-in-out;
 }
 
 .gift span {
