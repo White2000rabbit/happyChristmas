@@ -52,9 +52,11 @@ nav, footer, header {
 
 
    &__header {
+      position: fixed;
       height: 90px;
       width: 100%;
       background-color: $color-2;
+      z-index: 5;
    }
    &__content {
       min-height: 100vh;
@@ -96,7 +98,6 @@ nav, footer, header {
       width: 10px;
       height:10px;
       opacity: 1;
-
    }
    &:hover {
    background-color: $color-3;

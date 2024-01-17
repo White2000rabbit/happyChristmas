@@ -1,11 +1,49 @@
 @import 'common-style.scss';
 
+@keyframes start {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes toBottom{
+  0% {
+    transform: translateY(-250%);
+  }
+  100% {
+    transform: translateY(40%);
+  }
+}
+@keyframes toRight{
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(-19%);
+    width: 100wh;
+    height: 100vh
+  }
+}
+
 .content {
-    background-color: $color-1;
-   background: linear-gradient(
+  height: 100%;
+  width:100%;
+  background-color: $color-1;
+  background: linear-gradient(
       rgba(255,255,255, 0) .9em, rgba(0, 0, 0, .15) 1em)
     0 0,
-    linear-gradient(90deg,
+  linear-gradient(90deg,
       rgba(255,255,255, 0) .9em, rgba(0, 0, 0, .15) 1em)
     0 0;
   background-size: 1em 1em;
@@ -22,4 +60,85 @@
   font-size: 18px;
   opacity: 0;
   }
+}
+
+.animation {
+  position:relative;
+  margin: 0 auto;
+  padding:0;
+}
+.slide {
+  position: fixed;
+  top:40px;
+  left: 250px;
+  opacity:0;
+  z-index:10;
+}
+.slide img  {
+  width: 750px;
+  height: 800px;
+}
+
+.slide-1 {
+  animation: start 2s 0.3s ease-in-out;
+  animation-fill-mode:forwards;
+}
+
+.slide-2 {
+  animation: start 2s 2s ease-in-out;
+  animation-fill-mode:forwards;
+}
+
+.slide-3 { 
+  animation: start 3s 2s ease-in-out;
+  animation-fill-mode:forwards;
+}
+.slide-4 { 
+  animation: start 4s 2s ease-in-out;
+  animation-fill-mode:forwards;
+}
+.slide-5 { 
+  animation: start 4s 2s ease-in-out;
+  animation-fill-mode:forwards;
+}
+.slide-6 { 
+  animation: start 4s 2s ease-in-out;
+  animation-fill-mode:forwards;
+}
+.slide-7 {
+  transform: translateX(-150%);
+  opacity:1;
+  animation: toRight 2s 3s ease-in-out;
+  animation-fill-mode:forwards;
+  z-index: 1;
+  width: 100%;
+
+}
+.slide-7 img {
+  width: 1440px;
+  height: 100%;
+}
+.slide-8 {
+  transform: translateY(-250%);
+  left: 690px;
+  opacity:1;
+  animation: toBottom 2s 3s ease-in-out;
+  animation-fill-mode:forwards;
+}
+.slide-8 img {
+  width: 200px;
+  height: 300px;
+}
+.slide-9 { 
+  transform: translateY(-250%);
+  top: -20px;
+  left: 100px;
+  opacity:1;
+  animation: toBottom 2s 3s ease-in-out;
+  animation-fill-mode:forwards;
+  z-index:2;
+}
+.slide-9 img {
+  width: 900px;
+  height: 140px;
 }
