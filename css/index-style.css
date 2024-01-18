@@ -46,11 +46,11 @@ nav, footer, header {
   width: 100%;
 }
 .page__header {
-  position: fixed;
+  position: relative;
   height: 90px;
   width: 100%;
   background-color: #25330F;
-  z-index: 5;
+  z-index: 2;
 }
 .page__content {
   min-height: 100vh;
@@ -136,15 +136,6 @@ nav, footer, header {
   0% {
     opacity: 0;
   }
-  25% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  75% {
-    opacity: 0.7;
-  }
   100% {
     opacity: 1;
   }
@@ -153,15 +144,6 @@ nav, footer, header {
 @keyframes start {
   0% {
     opacity: 0;
-  }
-  25% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  75% {
-    opacity: 0.7;
   }
   100% {
     opacity: 1;
@@ -445,8 +427,8 @@ nav, footer, header {
   -webkit-transform: translateX(-150%);
           transform: translateX(-150%);
   opacity: 1;
-  -webkit-animation: toRight 2s 3s ease-in-out;
-          animation: toRight 2s 3s ease-in-out;
+  -webkit-animation: toRight 2s 4s ease-in-out;
+          animation: toRight 2s 4s ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   z-index: 1;
@@ -463,8 +445,8 @@ nav, footer, header {
           transform: translateY(-250%);
   left: 690px;
   opacity: 1;
-  -webkit-animation: toBottom 2s 3s ease-in-out;
-          animation: toBottom 2s 3s ease-in-out;
+  -webkit-animation: toBottom 2s 5s ease-in-out;
+          animation: toBottom 2s 5s ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -475,13 +457,13 @@ nav, footer, header {
 }
 
 .slide-9 {
-  -webkit-transform: translateY(-250%);
-          transform: translateY(-250%);
+  -webkit-transform: translateY(-370%);
+          transform: translateY(-370%);
   top: 80px;
   left: 100px;
   opacity: 1;
-  -webkit-animation: toBottom 3s 3s ease-in-out;
-          animation: toBottom 3s 3s ease-in-out;
+  -webkit-animation: toBottom 1s 6s ease-in-out;
+          animation: toBottom 1s 6s ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   z-index: 1000;
@@ -516,25 +498,25 @@ nav, footer, header {
   border-radius: 50%;
   margin: 20px;
   display: inline-block;
-  background: #00f7a5;
-  -webkit-box-shadow: 0px 4.66667px 24px 3px #00f7a5;
-          box-shadow: 0px 4.66667px 24px 3px #00f7a5;
+  background: rgb(0, 47, 85);
+  -webkit-box-shadow: 0px 4.66667px 24px 3px rgb(0, 47, 85);
+          box-shadow: 0px 4.66667px 24px 3px rgb(0, 47, 85);
   -webkit-animation: flash-1 2s infinite;
           animation: flash-1 2s infinite;
 }
 
 .lightrope li:nth-child(2n+1) {
-  background: cyan;
-  -webkit-box-shadow: 0px 4.66667px 24px 3px rgba(0, 255, 255, 0.5);
-          box-shadow: 0px 4.66667px 24px 3px rgba(0, 255, 255, 0.5);
+  background: rgb(52, 201, 36);
+  -webkit-box-shadow: 0px 4.66667px 24px 3px rgb(52, 201, 36);
+          box-shadow: 0px 4.66667px 24px 3px rgb(52, 201, 36);
   -webkit-animation: flash-2 0.4s infinite;
           animation: flash-2 0.4s infinite;
 }
 
 .lightrope li:nth-child(4n+2) {
-  background: #f70094;
-  -webkit-box-shadow: 0px 4.66667px 24px 3px #f70094;
-          box-shadow: 0px 4.66667px 24px 3px #f70094;
+  background: #800000;
+  -webkit-box-shadow: 0px 4.66667px 24px 3px #800000;
+          box-shadow: 0px 4.66667px 24px 3px #800000;
   -webkit-animation: flash-3 1.1s infinite;
           animation: flash-3 1.1s infinite;
 }
@@ -581,74 +563,74 @@ nav, footer, header {
 
 @-webkit-keyframes flash-1 {
   0%, 100% {
-    background: #00f7a5;
-    -webkit-box-shadow: 0px 4.66667px 24px 3px #00f7a5;
-            box-shadow: 0px 4.66667px 24px 3px #00f7a5;
+    background: rgb(0, 47, 85);
+    -webkit-box-shadow: 0px 4.66667px 24px 3px rgb(0, 47, 85);
+            box-shadow: 0px 4.66667px 24px 3px rgb(0, 47, 85);
   }
   50% {
-    background: rgba(0, 247, 165, 0.4);
-    -webkit-box-shadow: 0px 4.66667px 24px 3px rgba(0, 247, 165, 0.2);
-            box-shadow: 0px 4.66667px 24px 3px rgba(0, 247, 165, 0.2);
+    background: rgb(30, 144, 255);
+    -webkit-box-shadow: 0px 4.66667px 24px 3px rgb(30, 144, 255);
+            box-shadow: 0px 4.66667px 24px 3px rgb(30, 144, 255);
   }
 }
 
 @keyframes flash-1 {
   0%, 100% {
-    background: #00f7a5;
-    -webkit-box-shadow: 0px 4.66667px 24px 3px #00f7a5;
-            box-shadow: 0px 4.66667px 24px 3px #00f7a5;
+    background: rgb(0, 47, 85);
+    -webkit-box-shadow: 0px 4.66667px 24px 3px rgb(0, 47, 85);
+            box-shadow: 0px 4.66667px 24px 3px rgb(0, 47, 85);
   }
   50% {
-    background: rgba(0, 247, 165, 0.4);
-    -webkit-box-shadow: 0px 4.66667px 24px 3px rgba(0, 247, 165, 0.2);
-            box-shadow: 0px 4.66667px 24px 3px rgba(0, 247, 165, 0.2);
+    background: rgb(30, 144, 255);
+    -webkit-box-shadow: 0px 4.66667px 24px 3px rgb(30, 144, 255);
+            box-shadow: 0px 4.66667px 24px 3px rgb(30, 144, 255);
   }
 }
 @-webkit-keyframes flash-2 {
   0%, 100% {
-    background: cyan;
-    -webkit-box-shadow: 0px 4.66667px 24px 3px cyan;
-            box-shadow: 0px 4.66667px 24px 3px cyan;
+    background: rgb(52, 201, 36);
+    -webkit-box-shadow: 0px 4.66667px 24px 3px rgb(52, 201, 36);
+            box-shadow: 0px 4.66667px 24px 3px rgb(52, 201, 36);
   }
   50% {
-    background: rgba(0, 255, 255, 0.4);
-    -webkit-box-shadow: 0px 4.66667px 24px 3px rgba(0, 255, 255, 0.2);
-            box-shadow: 0px 4.66667px 24px 3px rgba(0, 255, 255, 0.2);
+    background: rgb(0, 255, 0);
+    -webkit-box-shadow: 0px 4.66667px 24px 3px rgb(0, 255, 0);
+            box-shadow: 0px 4.66667px 24px 3px rgb(0, 255, 0);
   }
 }
 @keyframes flash-2 {
   0%, 100% {
-    background: cyan;
-    -webkit-box-shadow: 0px 4.66667px 24px 3px cyan;
-            box-shadow: 0px 4.66667px 24px 3px cyan;
+    background: rgb(52, 201, 36);
+    -webkit-box-shadow: 0px 4.66667px 24px 3px rgb(52, 201, 36);
+            box-shadow: 0px 4.66667px 24px 3px rgb(52, 201, 36);
   }
   50% {
-    background: rgba(0, 255, 255, 0.4);
-    -webkit-box-shadow: 0px 4.66667px 24px 3px rgba(0, 255, 255, 0.2);
-            box-shadow: 0px 4.66667px 24px 3px rgba(0, 255, 255, 0.2);
+    background: rgb(0, 255, 0);
+    -webkit-box-shadow: 0px 4.66667px 24px 3px rgb(0, 255, 0);
+            box-shadow: 0px 4.66667px 24px 3px rgb(0, 255, 0);
   }
 }
 @-webkit-keyframes flash-3 {
   0%, 100% {
-    background: #c5062f;
-    -webkit-box-shadow: 0px 4.66667px 24px 3px rgb(211, 4, 73), 0, 33;
-            box-shadow: 0px 4.66667px 24px 3px rgb(211, 4, 73), 0, 33;
+    background: #800000;
+    -webkit-box-shadow: 0px 4.66667px 24px 3px #800000;
+            box-shadow: 0px 4.66667px 24px 3px #800000;
   }
   50% {
-    background: rgba(247, 0, 148, 0.4);
-    -webkit-box-shadow: 0px 4.66667px 24px 3px rgba(247, 0, 148, 0.2);
-            box-shadow: 0px 4.66667px 24px 3px rgba(247, 0, 148, 0.2);
+    background: rgb(255, 0, 51);
+    -webkit-box-shadow: 0px 4.66667px 24px 3px rgb(255, 0, 51);
+            box-shadow: 0px 4.66667px 24px 3px rgb(255, 0, 51);
   }
 }
 @keyframes flash-3 {
   0%, 100% {
-    background: #c5062f;
-    -webkit-box-shadow: 0px 4.66667px 24px 3px rgb(211, 4, 73), 0, 33;
-            box-shadow: 0px 4.66667px 24px 3px rgb(211, 4, 73), 0, 33;
+    background: #800000;
+    -webkit-box-shadow: 0px 4.66667px 24px 3px #800000;
+            box-shadow: 0px 4.66667px 24px 3px #800000;
   }
   50% {
-    background: rgba(247, 0, 148, 0.4);
-    -webkit-box-shadow: 0px 4.66667px 24px 3px rgba(247, 0, 148, 0.2);
-            box-shadow: 0px 4.66667px 24px 3px rgba(247, 0, 148, 0.2);
+    background: rgb(255, 0, 51);
+    -webkit-box-shadow: 0px 4.66667px 24px 3px rgb(255, 0, 51);
+            box-shadow: 0px 4.66667px 24px 3px rgb(255, 0, 51);
   }
 }

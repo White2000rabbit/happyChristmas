@@ -11,6 +11,11 @@ $color-9:#4b280a;
 $border: rgb(75, 40, 10, 0.8);
 $wave-1:#FFFAFA;
 $wave-2:#DCDCDC;
+$light-1:rgb(52,201,36);
+$light-2: rgb(0,255,0);
+$light-3:rgb(255,0,51);
+$light-4: rgb( 0,47,85);
+$light-5: rgb(30,144,255);
 
 /*Обнуляющие стили*/
 * {
@@ -52,11 +57,11 @@ nav, footer, header {
 
 
    &__header {
-      position: fixed;
+      position: relative;
       height: 90px;
       width: 100%;
       background-color: $color-2;
-      z-index: 5;
+      z-index: 2;
    }
    &__content {
       min-height: 100vh;

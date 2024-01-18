@@ -76,7 +76,7 @@
 //контент
 .content {
    background-color: $color-8;
-   z-index: 0;
+   z-index: 5;
    position: relative;
 
    &__block {
@@ -100,7 +100,7 @@
    }
    &__deer {
       position: fixed;
-      z-index: 3;
+      z-index: 100;
    }
 }
 //олени
@@ -331,30 +331,125 @@
 }
 //карточки
 .calendar {
-   display: flex;
-   width: 100%;
-   height: 100%;
-   padding: 30px;
-   justify-content: center;
-   align-items:center;
-   gap: 15px;
-   flex-wrap: wrap;
-   padding-top:100px;
-   padding-left: 200px;
-   padding-bottom: 200px;
+   display: grid;
+   width: 80%;
+   min-height: 100vh;
+   grid-template-rows: auto;
+   grid-gap: 15px;
+   grid-template-columns: repeat(7, 1fr);
+   grid-template-areas:
+      "day5 day17 day15 day6 day22 day14 day3 "
+      "day23 day1  day24 day24 day20 day29 day19"
+      "day25 day18 day24 day24 day30 day12 day9"
+      "day7 day4 day13 day11 day21 day27 day27"
+      "day28 day10 day2 day8 day31 day16 day26";
    z-index:500;
-   &__card {
-      width: 8rem;
-      height: 8rem;
-      perspective: 1000px;
-      border: 1px solid black;
+   padding: 60px 20px 30px 170px;
+   justify-content: center;
 
+   &__card {
+      min-width: 8rem;
+      min-height: 8rem;
+      perspective: 1000px;
+      border: 1px dotted black;
    }
 }
 .card {
    position:relative;
 }
-
+   .card--1 {
+      grid-area: day1;
+   }
+   .card--2 {
+      grid-area: day2;
+   }
+   .card--3 {
+      grid-area: day3;
+   }
+   .card--4 {
+      grid-area: day4;
+   }
+   .card--5 {
+      grid-area: day5;
+   }
+   .card--6 {
+      grid-area: day6;
+   }
+   .card--7 {
+      grid-area: day7;
+   }
+   .card--8 {
+      grid-area: day8;
+   }
+   .card--9 {
+      grid-area: day9;
+   }
+   .card--10 {
+      grid-area: day10;
+   }
+   .card--11 {
+      grid-area: day11;
+   }
+   .card--12 {
+      grid-area: day12;
+   }
+   .card--13 {
+      grid-area: day13;
+   }
+   .card--14 {
+      grid-area: day14;
+   }
+   .card--15 {
+      grid-area: day15;
+   }
+   .card--16 {
+      grid-area: day16;
+   }
+   .card--17 {
+      grid-area: day17;
+   }
+   .card--18 {
+      grid-area: day18;
+   }
+   .card--19 {
+      grid-area: day19;
+   }
+   .card--20 {
+      grid-area: day20;
+   }
+   .card--21 {
+      grid-area: day21;
+   }
+   .card--22 {
+      grid-area: day22;
+   }
+   card--23 {
+      grid-area: day23;
+   }
+   .card--24 {
+      grid-area: day24;
+   }
+   .card--25 {
+      grid-area: day25;
+   }
+   .card--26 {
+      grid-area: day26;
+   }
+  .card--27 {
+      grid-area: day27;
+   }
+   .card--28 {
+      grid-area: day28;
+   }
+   .card--29 {
+      grid-area: day29;
+   }
+   .card--30 {
+      grid-area: day30;
+   }
+   .card--31 {
+      grid-area: day31;
+   }
 .front, .back {
    position: absolute;
    width: 100%;
