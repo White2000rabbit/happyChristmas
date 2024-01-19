@@ -19,17 +19,15 @@
   }
 }
 
-
-
 @keyframes isVisible {
   0% {
     opacity: 0;
   }
   50% {
-    opacity:0.5;
+    opacity:0.2;
   }
   100% {
-    opacity: 1;
+    opacity: 5;
   }
 }
 
@@ -60,8 +58,8 @@
   right: 60px;
   transform: translateY(0px);
   animation: 
-    jumping 3s 10s ease-in-out forwards, 
-    lighting 3s 13s ease-in-out infinite;
+    jumping 3s 6s ease-in-out forwards, 
+    lighting 3s 7s ease-in-out infinite;
   @keyframes lighting {
     0% {
       background-color:$wave-2;
@@ -118,21 +116,6 @@
     &:nth-child(1) //gift 
     {
       z-index: 100;
-      animation: gift-jump 2s 6s ease-in-out forwards;
-      
-      @keyframes gift-jump {
-        0% {
-          opacity:0;
-          transform: translateY(-200vh);
-        }
-        20% {
-          opacity: 1;
-        }
-        100% {
-          opacity:1;
-          transform: translateY(0px);
-        }
-      }
     }
     &:nth-child(2) //santa 
     {
@@ -169,8 +152,31 @@
   perspective: 1000px;
   perspective-origin: center -5em;
   z-index:500;
-  transform: translateY(0);
-
+  transform: translateY(-200vh);
+  animation: gift-jump 2s 4s ease-in-out forwards;
+  @keyframes gift-jump {
+    0% {
+      opacity:0;
+      transform: translateY(-200vh);
+    }
+    20% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-150px);
+    }
+    70% {
+      opacity: 1;
+      transform: translateY(-200px);
+    }
+    100%{
+      opacity:1;
+      transform: translateY(0px) rotate(0deg);
+      transform-origin: bottom;
+    }
+  }
 .box__side,
 .gift__container {
   width: 8em;
@@ -524,7 +530,8 @@
     top: 10em;
     left: -5em;
     z-index: 17;
-    
+    opacity:0;
+    animation: isVisible 2s 5s ease-in-out forwards;
   }
 
   &__trunk {
@@ -577,7 +584,7 @@
     border: 1px solid black;
     display: block;
     border-radius: 50%;
-    animation: lights-fall 3s 5s ease-in-out forwards;
+    animation: lights-fall 2s 2s ease-in-out forwards;
     z-index:1000;
   }
   &__item:before {

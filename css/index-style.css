@@ -178,10 +178,10 @@ nav, footer, header {
     opacity: 0;
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.2;
   }
   100% {
-    opacity: 1;
+    opacity: 5;
   }
 }
 @keyframes isVisible {
@@ -189,10 +189,10 @@ nav, footer, header {
     opacity: 0;
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.2;
   }
   100% {
-    opacity: 1;
+    opacity: 5;
   }
 }
 @-webkit-keyframes lights-fall {
@@ -229,8 +229,8 @@ nav, footer, header {
   right: 60px;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
-  -webkit-animation: jumping 3s 10s ease-in-out forwards, lighting 3s 13s ease-in-out infinite;
-          animation: jumping 3s 10s ease-in-out forwards, lighting 3s 13s ease-in-out infinite;
+  -webkit-animation: jumping 3s 6s ease-in-out forwards, lighting 3s 7s ease-in-out infinite;
+          animation: jumping 3s 6s ease-in-out forwards, lighting 3s 7s ease-in-out infinite;
 }
 @-webkit-keyframes lighting {
   0% {
@@ -328,38 +328,6 @@ nav, footer, header {
 }
 .animation__item:nth-child(1) {
   z-index: 100;
-  -webkit-animation: gift-jump 2s 6s ease-in-out forwards;
-          animation: gift-jump 2s 6s ease-in-out forwards;
-}
-@-webkit-keyframes gift-jump {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-200vh);
-            transform: translateY(-200vh);
-  }
-  20% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-}
-@keyframes gift-jump {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-200vh);
-            transform: translateY(-200vh);
-  }
-  20% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
 }
 .animation__item:nth-child(2) {
   z-index: 90;
@@ -396,13 +364,73 @@ nav, footer, header {
   -webkit-perspective-origin: center -5em;
           perspective-origin: center -5em;
   z-index: 500;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: translateY(-200vh);
+          transform: translateY(-200vh);
+  -webkit-animation: gift-jump 2s 4s ease-in-out forwards;
+          animation: gift-jump 2s 4s ease-in-out forwards;
   --red:rgba(255,0,36,1);
   --dark-red:rgba(97,0,23,1);
   --yellow: rgb(255,186,0);
   --yellow-light:rgb(255,244,0);
   --lemon: rgb(254,254,34);
+}
+@-webkit-keyframes gift-jump {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-200vh);
+            transform: translateY(-200vh);
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(-150px);
+            transform: translateY(-150px);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+  }
+}
+@keyframes gift-jump {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-200vh);
+            transform: translateY(-200vh);
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(-150px);
+            transform: translateY(-150px);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+  }
 }
 .gift .box__side,
 .gift .gift__container {
@@ -775,6 +803,9 @@ nav, footer, header {
   top: 10em;
   left: -5em;
   z-index: 17;
+  opacity: 0;
+  -webkit-animation: isVisible 2s 5s ease-in-out forwards;
+          animation: isVisible 2s 5s ease-in-out forwards;
 }
 .tree__trunk {
   position: relative;
@@ -840,8 +871,8 @@ nav, footer, header {
   border: 1px solid black;
   display: block;
   border-radius: 50%;
-  -webkit-animation: lights-fall 3s 5s ease-in-out forwards;
-          animation: lights-fall 3s 5s ease-in-out forwards;
+  -webkit-animation: lights-fall 2s 2s ease-in-out forwards;
+          animation: lights-fall 2s 2s ease-in-out forwards;
   z-index: 1000;
 }
 .lightrope-tree__item:before {
