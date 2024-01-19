@@ -173,30 +173,6 @@ nav, footer, header {
             transform: translateY(40%);
   }
 }
-@-webkit-keyframes toRight {
-  0% {
-    -webkit-transform: translateX(-150%);
-            transform: translateX(-150%);
-  }
-  100% {
-    -webkit-transform: translateX(-18%);
-            transform: translateX(-18%);
-    width: 1700px;
-    height: 100%;
-  }
-}
-@keyframes toRight {
-  0% {
-    -webkit-transform: translateX(-150%);
-            transform: translateX(-150%);
-  }
-  100% {
-    -webkit-transform: translateX(-18%);
-            transform: translateX(-18%);
-    width: 1700px;
-    height: 100%;
-  }
-}
 @-webkit-keyframes isVisible {
   0% {
     opacity: 0;
@@ -345,15 +321,15 @@ nav, footer, header {
   padding: 0;
 }
 .animation__item {
-  top: 40px;
-  left: 250px;
+  top: 0px;
+  left: 0px;
   opacity: 0;
   position: fixed;
 }
 .animation__item:nth-child(1) {
   z-index: 100;
-  -webkit-animation: gift-jump 1s 1s ease-in-out forwards;
-          animation: gift-jump 1s 1s ease-in-out forwards;
+  -webkit-animation: gift-jump 2s 6s ease-in-out forwards;
+          animation: gift-jump 2s 6s ease-in-out forwards;
 }
 @-webkit-keyframes gift-jump {
   0% {
@@ -387,34 +363,34 @@ nav, footer, header {
 }
 .animation__item:nth-child(2) {
   z-index: 90;
-  -webkit-animation: start 2s 2s ease-in-out forwards;
-          animation: start 2s 2s ease-in-out forwards;
+  -webkit-animation: start 2s 1s ease-in-out forwards;
+          animation: start 2s 1s ease-in-out forwards;
 }
 .animation__item:nth-child(3) {
-  z-index: 1;
-  -webkit-animation: toRight 2s 2s ease-in-out forwards;
-          animation: toRight 2s 2s ease-in-out forwards;
+  z-index: 0;
+  -webkit-animation: toRight 2s 1s ease-in-out forwards;
+          animation: toRight 2s 1s ease-in-out forwards;
 }
 .animation__item:nth-child(4) {
   z-index: 100;
-  -webkit-animation: toBottom 2s 3s ease-in-out forwards;
-          animation: toBottom 2s 3s ease-in-out forwards;
+  -webkit-animation: toBottom 2s 1s ease-in-out forwards;
+          animation: toBottom 2s 1s ease-in-out forwards;
 }
 .animation__item:nth-child(5) {
   z-index: 110;
-  -webkit-animation: toBottom 2s 5s ease-in-out forwards;
-          animation: toBottom 2s 5s ease-in-out forwards;
+  -webkit-animation: toBottom 2s 1s ease-in-out forwards;
+          animation: toBottom 2s 1s ease-in-out forwards;
 }
 .animation__item:nth-child(6) {
   z-index: 110;
-  -webkit-animation: toBottom 1s 6s ease-in-out forwards;
-          animation: toBottom 1s 6s ease-in-out forwards;
+  -webkit-animation: toBottom 1s 1s ease-in-out forwards;
+          animation: toBottom 1s 1s ease-in-out forwards;
 }
 
 .gift {
   position: absolute;
-  top: 400px;
-  left: 0px;
+  top: 300px;
+  right: 7.6em;
   -webkit-perspective: 1000px;
           perspective: 1000px;
   -webkit-perspective-origin: center -5em;
@@ -422,13 +398,18 @@ nav, footer, header {
   z-index: 500;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+  --red:rgba(255,0,36,1);
+  --dark-red:rgba(97,0,23,1);
+  --yellow: rgb(255,186,0);
+  --yellow-light:rgb(255,244,0);
+  --lemon: rgb(254,254,34);
 }
 .gift .box__side,
 .gift .gift__container {
   width: 8em;
   height: 8em;
 }
-.gift .gift__container {
+.gift__container {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-animation: rotate 10s infinite linear;
@@ -443,27 +424,27 @@ nav, footer, header {
 .gift .box__back {
   -webkit-transform: translateZ(-4em);
           transform: translateZ(-4em);
-  background: -webkit-gradient(linear, left top, right top, from(rgb(255, 186, 0)), color-stop(38%, rgb(255, 186, 0)), color-stop(39%, rgb(97, 0, 23)), color-stop(40%, rgb(255, 0, 36)), color-stop(52%, rgb(255, 0, 36)), color-stop(53%, rgb(97, 0, 23)), color-stop(54%, rgb(255, 186, 0)), to(rgb(255, 186, 0)));
-  background: linear-gradient(90deg, rgb(255, 186, 0) 0%, rgb(255, 186, 0) 38%, rgb(97, 0, 23) 39%, rgb(255, 0, 36) 40%, rgb(255, 0, 36) 52%, rgb(97, 0, 23) 53%, rgb(255, 186, 0) 54%, rgb(255, 186, 0) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(var(--yellow)), color-stop(38%, var(--yellow)), color-stop(39%, var(--dark-red)), color-stop(40%, var(--red)), color-stop(52%, var(--red)), color-stop(53%, var(--dark-red)), color-stop(54%, var(--yellow)), to(var(--yellow)));
+  background: linear-gradient(90deg, var(--yellow) 0%, var(--yellow) 38%, var(--dark-red) 39%, var(--red) 40%, var(--red) 52%, var(--dark-red) 53%, var(--yellow) 54%, var(--yellow) 100%);
 }
 .gift .box__left {
   -webkit-transform: translateX(-4em) rotateY(90deg);
           transform: translateX(-4em) rotateY(90deg);
-  background: -webkit-gradient(linear, left top, right top, from(rgb(255, 186, 0)), color-stop(38%, rgb(255, 186, 0)), color-stop(39%, rgb(97, 0, 23)), color-stop(40%, rgb(255, 0, 36)), color-stop(52%, rgb(255, 0, 36)), color-stop(53%, rgb(97, 0, 23)), color-stop(54%, rgb(255, 186, 0)), to(rgb(255, 186, 0)));
-  background: linear-gradient(90deg, rgb(255, 186, 0) 0%, rgb(255, 186, 0) 38%, rgb(97, 0, 23) 39%, rgb(255, 0, 36) 40%, rgb(255, 0, 36) 52%, rgb(97, 0, 23) 53%, rgb(255, 186, 0) 54%, rgb(255, 186, 0) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(var(--yellow)), color-stop(38%, var(--yellow)), color-stop(39%, var(--dark-red)), color-stop(40%, var(--red)), color-stop(52%, var(--red)), color-stop(53%, var(--dark-red)), color-stop(54%, var(--yellow)), to(var(--yellow)));
+  background: linear-gradient(90deg, var(--yellow) 0%, var(--yellow) 38%, var(--dark-red) 39%, var(--red) 40%, var(--red) 52%, var(--dark-red) 53%, var(--yellow) 54%, var(--yellow) 100%);
 }
 .gift .box__right {
   -webkit-transform: translateX(4em) rotateY(90deg);
           transform: translateX(4em) rotateY(90deg);
-  background: -webkit-gradient(linear, left top, right top, from(rgb(255, 186, 0)), color-stop(38%, rgb(255, 186, 0)), color-stop(39%, rgb(97, 0, 23)), color-stop(40%, rgb(255, 0, 36)), color-stop(52%, rgb(255, 0, 36)), color-stop(53%, rgb(97, 0, 23)), color-stop(54%, rgb(255, 186, 0)), to(rgb(255, 186, 0)));
-  background: linear-gradient(90deg, rgb(255, 186, 0) 0%, rgb(255, 186, 0) 38%, rgb(97, 0, 23) 39%, rgb(255, 0, 36) 40%, rgb(255, 0, 36) 52%, rgb(97, 0, 23) 53%, rgb(255, 186, 0) 54%, rgb(255, 186, 0) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(var(--yellow)), color-stop(38%, var(--yellow)), color-stop(39%, var(--dark-red)), color-stop(40%, var(--red)), color-stop(52%, var(--red)), color-stop(53%, var(--dark-red)), color-stop(54%, var(--yellow)), to(var(--yellow)));
+  background: linear-gradient(90deg, var(--yellow) 0%, var(--yellow) 38%, var(--dark-red) 39%, var(--red) 40%, var(--red) 52%, var(--dark-red) 53%, var(--yellow) 54%, var(--yellow) 100%);
 }
 .gift .box__top {
   -webkit-transform: translateY(-4em) rotateX(90deg);
           transform: translateY(-4em) rotateX(90deg);
-  background-color: rgb(255, 244, 0);
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 244, 0, 0)), color-stop(41%, rgba(254, 254, 0, 0)), color-stop(43%, rgb(97, 0, 23)), color-stop(45%, rgb(255, 0, 36)), color-stop(55%, rgb(255, 0, 36)), color-stop(59%, rgb(97, 0, 23)), color-stop(60%, rgba(254, 254, 0, 0)), to(rgba(255, 244, 0, 0))), -webkit-gradient(linear, left top, left bottom, from(rgb(255, 244, 0)), color-stop(40%, rgb(254, 255, 0)), color-stop(43%, rgb(97, 0, 23)), color-stop(45%, rgb(255, 0, 36)), color-stop(55%, rgb(255, 0, 36)), color-stop(59%, rgb(97, 0, 23)), color-stop(60%, rgb(254, 254, 0)), to(rgb(255, 244, 0)));
-  background: linear-gradient(90deg, rgba(255, 244, 0, 0) 0%, rgba(254, 254, 0, 0) 41%, rgb(97, 0, 23) 43%, rgb(255, 0, 36) 45%, rgb(255, 0, 36) 55%, rgb(97, 0, 23) 59%, rgba(254, 254, 0, 0) 60%, rgba(255, 244, 0, 0) 100%), linear-gradient(180deg, rgb(255, 244, 0) 0%, rgb(254, 255, 0) 40%, rgb(97, 0, 23) 43%, rgb(255, 0, 36) 45%, rgb(255, 0, 36) 55%, rgb(97, 0, 23) 59%, rgb(254, 254, 0) 60%, rgb(255, 244, 0) 100%);
+  background-color: var(--yellow-light);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 244, 0, 0)), color-stop(41%, rgba(254, 254, 0, 0)), color-stop(43%, var(--dark-red)), color-stop(45%, var(--red)), color-stop(55%, var(--red)), color-stop(59%, var(--dark-red)), color-stop(60%, rgba(254, 254, 0, 0)), to(rgba(255, 244, 0, 0))), -webkit-gradient(linear, left top, left bottom, from(var(--yellow-light)), color-stop(40%, var(--yellow-light)), color-stop(43%, var(--dark-red)), color-stop(45%, var(--red)), color-stop(55%, var(--red)), color-stop(59%, var(--dark-red)), color-stop(60%, var(--yellow-light)), to(var(--yellow-light)));
+  background: linear-gradient(90deg, rgba(255, 244, 0, 0) 0%, rgba(254, 254, 0, 0) 41%, var(--dark-red) 43%, var(--red) 45%, var(--red) 55%, var(--dark-red) 59%, rgba(254, 254, 0, 0) 60%, rgba(255, 244, 0, 0) 100%), linear-gradient(180deg, var(--yellow-light) 0%, var(--yellow-light) 40%, var(--dark-red) 43%, var(--red) 45%, var(--red) 55%, var(--dark-red) 59%, var(--yellow-light) 60%, var(--yellow-light) 100%);
 }
 .gift .box__bottom {
   -webkit-transform: translateY(4em) rotateX(90deg);
@@ -473,9 +454,9 @@ nav, footer, header {
 .gift .box__front {
   -webkit-transform: translateZ(4em);
           transform: translateZ(4em);
-  background: rgb(243, 218, 11);
-  background: -webkit-gradient(linear, left top, right top, from(rgb(243, 218, 11)), color-stop(38%, rgb(243, 218, 11)), color-stop(39%, rgb(97, 0, 23)), color-stop(40%, rgb(255, 0, 36)), color-stop(52%, rgb(255, 0, 36)), color-stop(53%, rgb(97, 0, 23)), color-stop(54%, rgb(243, 218, 11)), to(rgb(255, 244, 0)));
-  background: linear-gradient(90deg, rgb(243, 218, 11) 0%, rgb(243, 218, 11) 38%, rgb(97, 0, 23) 39%, rgb(255, 0, 36) 40%, rgb(255, 0, 36) 52%, rgb(97, 0, 23) 53%, rgb(243, 218, 11) 54%, rgb(255, 244, 0) 100%);
+  background: var(--lemon);
+  background: -webkit-gradient(linear, left top, right top, from(var(--lemon)), color-stop(38%, var(--lemon)), color-stop(39%, var(--dark-red)), color-stop(40%, var(--red)), color-stop(52%, var(--red)), color-stop(53%, var(--dark-red)), color-stop(54%, var(--lemon)), to(var(--lemon)));
+  background: linear-gradient(90deg, var(--lemon) 0%, var(--lemon) 38%, var(--dark-red) 39%, var(--red) 40%, var(--red) 52%, var(--dark-red) 53%, var(--lemon) 54%, var(--lemon) 100%);
 }
 @-webkit-keyframes rotate {
   100% {
@@ -489,47 +470,21 @@ nav, footer, header {
             transform: rotateY(360deg);
   }
 }
-@keyframes rotate {
-  100% {
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  }
-}
-.gift::before {
-  position: absolute;
-  content: "Кликни сюда:)";
-  font-size: 18px;
-  top: 50;
-  left: -50px;
-  width: 20px;
-  height: 2px;
-  opacity: 0;
-  -webkit-animation: isVisible 2s 1s ease-in-out;
-          animation: isVisible 2s 1s ease-in-out;
-}
-
-.gift span {
-  display: block;
-  font-size: 100px;
-}
-
-.gift__link:hover {
-  -webkit-transform: scale(3) rotate(360deg);
-          transform: scale(3) rotate(360deg);
-}
 
 .santa {
   --skin: #fca;
   --eyes: #630a;
   --cheeks: #f001;
-  --beard: #eee;
+  --beard: rgb(206, 204, 204);
   --mustache: #fff;
   --suit: #a00;
-  width: 80vmin;
-  height: 80vmin;
+  --belt: #2e1905;
+  --belt-buckle: gold;
+  width: 20em;
+  height: 20em;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 19em;
+  left: 30em;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -543,43 +498,49 @@ nav, footer, header {
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   background: var(--skin);
+  z-index: 300;
+  border: 2px solid rgb(109, 109, 109);
 }
 .santa__eyes {
   position: absolute;
   top: 23%;
-  left: 45%;
-  width: 2%;
-  height: 2%;
+  left: 42%;
+  width: 3%;
+  height: 3%;
   background: var(--eyes);
   border-radius: 50%;
   -webkit-box-shadow: 6.66vmin 0 var(--eyes);
           box-shadow: 6.66vmin 0 var(--eyes);
+  z-index: 301;
 }
 .santa__cheeks {
   position: absolute;
   top: 25.5%;
-  left: 43%;
-  width: 5%;
+  left: 41%;
+  width: 3%;
   height: 3%;
   background: var(--cheeks);
   border-radius: 50%;
   -webkit-box-shadow: 7.25vmin 0 var(--cheeks);
           box-shadow: 7.25vmin 0 var(--cheeks);
+  z-index: 301;
 }
 .santa__mustache {
   position: absolute;
   top: 31%;
   left: 51%;
-  width: 10%;
-  height: 10%;
+  width: 15%;
+  height: 15%;
   background: var(--mustache);
   border-radius: 100% 20% 100% 0;
   -webkit-transform-origin: top right;
           transform-origin: top right;
   -webkit-transform: translate(-100%, 0) rotate(25deg);
           transform: translate(-100%, 0) rotate(25deg);
+  z-index: 301;
+  border: 2px solid rgb(109, 109, 109);
 }
-.santa__mustache + .mustache {
+.santa__mustache + .santa__mustache {
   left: 49%;
   border-radius: 20% 100% 0 100%;
   -webkit-transform-origin: top left;
@@ -587,16 +548,42 @@ nav, footer, header {
   -webkit-transform: rotate(-25deg);
           transform: rotate(-25deg);
 }
+.santa__beard {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 30%;
+  height: 40%;
+  background: var(--beard);
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  border-radius: 100%/180% 120% 80% 180%;
+  z-index: 299;
+  border: 2px solid rgb(109, 109, 109);
+}
+.santa__mouth {
+  position: absolute;
+  top: 35%;
+  left: 48%;
+  width: 4%;
+  height: 3%;
+  border-bottom: 3px solid rgb(85, 2, 2);
+  border-radius: 45%;
+  z-index: 301;
+}
 .santa__hat {
   position: absolute;
-  width: 23%;
+  width: 27%;
   height: 20%;
   background: var(--suit);
-  border-radius: 100% 20% 0 0;
-  top: -2%;
+  border-radius: 0% 180% 20% 20%;
+  top: -3%;
   left: 50%;
-  -webkit-transform: translate(-50%, 0) rotate(1deg);
-          transform: translate(-50%, 0) rotate(1deg);
+  -webkit-transform: translate(-50%, 0) rotate(10deg);
+          transform: translate(-50%, 0) rotate(10deg);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  z-index: 301;
 }
 .santa__hat::before {
   content: "";
@@ -616,12 +603,13 @@ nav, footer, header {
   content: "";
   display: block;
   position: absolute;
-  right: -5vmin;
-  top: -15%;
+  right: 4em;
+  top: -1em;
   width: 8vmin;
   height: 8vmin;
   border-radius: 50%;
   background: var(--beard);
+  border: 2px dotted rgb(109, 109, 109);
 }
 .santa__body {
   position: absolute;
@@ -633,16 +621,116 @@ nav, footer, header {
   border-radius: 100%/150% 150% 25% 25%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  background-image: radial-gradient(circle at 50% -50%, transparent 75%, var(--belt) 0 83%, transparent 0), -webkit-gradient(linear, left top, right top, color-stop(42%, transparent), color-stop(43%, white), color-stop(58%, transparent));
-  background-image: radial-gradient(circle at 50% -50%, transparent 75%, var(--belt) 0 83%, transparent 0), linear-gradient(to right, transparent 42%, white 43% 57%, transparent 58%);
+  background-image: radial-gradient(circle at 50% -50%, transparent 75%, var(--belt) 0 83%, transparent 0 92.5%, white 93%), -webkit-gradient(linear, left top, right top, color-stop(42%, transparent), color-stop(43%, white), color-stop(58%, transparent));
+  background-image: radial-gradient(circle at 50% -50%, transparent 75%, var(--belt) 0 83%, transparent 0 92.5%, white 93%), linear-gradient(to right, transparent 42%, white 43% 57%, transparent 58%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 51% 100%, 50% 96%, 49% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 51% 100%, 50% 96%, 49% 100%, 0% 100%);
+  z-index: 298;
+  border: 2px solid black;
+}
+.santa__buttons {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 3%;
+  height: 3%;
+  border-radius: 50%;
+  background: var(--belt);
+  color: var(--belt);
+  -webkit-box-shadow: 0 1.1em, 0 2em;
+          box-shadow: 0 1.1em, 0 2em;
+  z-index: 600;
+}
+.santa__belt {
+  position: absolute;
+  top: 73%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 15%;
+  height: 10%;
+  border-radius: 30%;
+  -webkit-box-shadow: inset 10px 0 0 2.6vmin var(--belt);
+          box-shadow: inset 10px 0 0 2.6vmin var(--belt);
+  z-index: 601;
+  border: 5px solid gold;
+}
+.santa__arms {
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 65%;
+  height: 40%;
+  background: var(--suit);
+  border-radius: 100%/170% 170% 25% 25%;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, transparent), to(rgba(0, 0, 0, 0.925)));
+  background-image: linear-gradient(transparent 20%, rgba(0, 0, 0, 0.925));
+  border: 2px solid black;
+}
+.santa__hands {
+  position: absolute;
+  top: 70%;
+  left: 18%;
+  width: 13%;
+  height: 13%;
+  background: black;
+  -webkit-box-shadow: 11em 0 black;
+          box-shadow: 11em 0 black;
+  border-radius: 50%;
+}
+.santa__leg {
+  position: absolute;
+  top: 75%;
+  left: 29%;
+  width: 19%;
+  height: 25%;
+  background: rgb(131, 1, 1);
+  -webkit-transform: skew(2deg);
+          transform: skew(2deg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1333333333)), color-stop(70%, transparent), color-stop(0, var(--belt)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1333333333), transparent 70%, var(--belt) 0);
+  border: 2px solid black;
+}
+.santa__leg + .santa__leg {
+  left: 52%;
+}
+.santa__leg::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: -6%;
+  width: 110%;
+  height: 40%;
+  background: black;
+  border-radius: 5em 5em 0 0;
+}
+.santa__leg::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3.5em;
+  left: 12%;
+  width: 3em;
+  height: 2em;
+  border-radius: 40%;
+  border-top: 3px solid white;
+  z-index: 301;
+}
+.santa__leg + .santa__leg::after {
+  left: -4%;
 }
 
 .tree {
-  width: 300px;
+  width: 30em;
   -webkit-transform: translateY(-250%);
           transform: translateY(-250%);
-  top: 70px;
-  left: 600px;
+  top: 4em;
+  left: 25em;
 }
 .tree__leaves, .tree__trunk {
   margin: 0 auto;
@@ -651,27 +739,27 @@ nav, footer, header {
   position: relative;
   width: 0;
   height: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-bottom: 120px solid rgb(1, 141, 1);
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 100px solid rgb(1, 141, 1);
   border-radius: 40px;
   z-index: 22;
 }
 .tree__leaves:nth-child(2) {
   position: relative;
   margin-top: -30px;
-  border-left-width: 110px;
-  border-right-width: 110px;
-  border-bottom-width: 140px;
+  border-left-width: 90px;
+  border-right-width: 90px;
+  border-bottom-width: 120px;
   border-bottom: 115px solid rgb(2, 121, 2);
   z-index: 21;
 }
 .tree__leaves:nth-child(3) {
   position: relative;
   margin-top: -20px;
-  border-left-width: 140px;
-  border-right-width: 140px;
-  border-bottom-width: 180px;
+  border-left-width: 120px;
+  border-right-width: 120px;
+  border-bottom-width: 160px;
   border-bottom: 130px solid rgb(1, 88, 1);
   z-index: 19;
 }
@@ -682,20 +770,43 @@ nav, footer, header {
 }
 
 .background {
-  -webkit-transform: translateX(-150%);
-          transform: translateX(-150%);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
   opacity: 1;
-  z-index: 1;
   width: 1500px;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
   background: rgb(255, 243, 145);
   background: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 243, 145)), color-stop(59%, rgb(255, 243, 145)), color-stop(60%, rgb(115, 72, 27)), color-stop(62%, rgb(3, 3, 3)), color-stop(62%, rgb(115, 72, 27)), color-stop(66%, rgb(3, 3, 3)), color-stop(66%, rgb(115, 72, 27)), color-stop(70%, rgb(3, 3, 3)), color-stop(70%, rgb(115, 72, 27)), color-stop(75%, rgb(3, 3, 3)), color-stop(75%, rgb(115, 72, 27)), color-stop(79%, rgb(3, 3, 3)), color-stop(79%, rgb(115, 72, 27)), color-stop(84%, rgb(3, 3, 3)), color-stop(84%, rgb(115, 72, 27)), color-stop(89%, rgb(3, 3, 3)), color-stop(89%, rgb(115, 72, 27)), color-stop(95%, rgb(3, 3, 3)), color-stop(95%, rgb(115, 72, 27)), color-stop(100%, rgb(3, 3, 3)), to(rgb(115, 72, 27)));
   background: linear-gradient(180deg, rgb(255, 243, 145) 0%, rgb(255, 243, 145) 59%, rgb(115, 72, 27) 60%, rgb(3, 3, 3) 62%, rgb(115, 72, 27) 62%, rgb(3, 3, 3) 66%, rgb(115, 72, 27) 66%, rgb(3, 3, 3) 70%, rgb(115, 72, 27) 70%, rgb(3, 3, 3) 75%, rgb(115, 72, 27) 75%, rgb(3, 3, 3) 79%, rgb(115, 72, 27) 79%, rgb(3, 3, 3) 84%, rgb(115, 72, 27) 84%, rgb(3, 3, 3) 89%, rgb(115, 72, 27) 89%, rgb(3, 3, 3) 95%, rgb(115, 72, 27) 95%, rgb(3, 3, 3) 100%, rgb(115, 72, 27) 100%);
+}
+@-webkit-keyframes toRight {
+  0% {
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+  }
+  100% {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+  }
+}
+@keyframes toRight {
+  0% {
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+  }
+  100% {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+  }
 }
 
 .lightrope-tree {
   -webkit-transform: translateY(-250%);
           transform: translateY(-250%);
-  left: 690px;
+  left: 36em;
+  top: 1.9em;
   opacity: 1;
   --red:#800000;
   --blue:rgb(30,144,255);
@@ -764,7 +875,7 @@ nav, footer, header {
 .lightrope-tree__item:nth-child(5) {
   width: 40px;
   height: 40px;
-  background-color: vat(--dark-blue);
+  background-color: var(--dark-blue);
   top: 70px;
   left: 65px;
 }
@@ -791,12 +902,12 @@ nav, footer, header {
 }
 
 .lightrope-wall {
-  -webkit-transform: translateY(-370%);
-          transform: translateY(-370%);
-  top: 230px;
-  left: 100px;
+  -webkit-transform: translateY(-100vh);
+          transform: translateY(-100vh);
+  top: -1em;
+  left: 2em;
   opacity: 1;
-  width: 80%;
+  width: 100%;
   height: 40px;
   --dark-blue:rgb( 0,47,85);
   --green:rgb(52,201,36);
