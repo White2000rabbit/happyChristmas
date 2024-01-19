@@ -369,10 +369,10 @@
     position: absolute;
     top: 35%;
     left: 50%;
-    width: 50%;
+    width: 55%;
     height: 50%;
     background: var(--suit);
-    border-radius: 100% / 150% 150% 25% 25%;
+    border-radius: 130%/130% 140% 50% 50%;
     transform: translate(-50%, 0);
     background-image:
     radial-gradient(circle at 50% -50%, transparent 75%, var(--belt) 0 83%, transparent 0 92.5%, white 93%),
@@ -409,25 +409,27 @@
   
   &__arms {
     position: absolute;
-    top: 37%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, 0);
-    width: 65%;
+    width: 75%;
     height: 40%;
     background: var(--suit);
-    border-radius: 100% / 170% 170% 25% 25%;
+    border-radius: 60%/180% 180% 25% 25%;
     background-image: linear-gradient(transparent 20%, rgba(0, 0, 0, 0.925));
     border: 2px solid black;
+    border-bottom: 2px solid white;
   }
   &__hands {
     position: absolute;
-    top: 70%;
-    left: 18%;
+    top: 73%;
+    left: 13%;
     width: 13%;
     height: 13%;
     background: black;
-    box-shadow: 11em 0 black;
-    border-radius: 50%;
+    -webkit-box-shadow: 11em 0 black;
+    box-shadow: 13em 0 black;
+    border-radius: 60%
   }
   &__leg {
     position: absolute;
@@ -511,11 +513,29 @@
     border-bottom: 130px solid rgb(1, 88, 1);
     z-index: 19;
 }
+  &__leaves:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    border-radius: 30%;
+    background-color: black;
+    opacity: 0.5;
+    width: 127px;
+    height: 30px;
+    top: 10em;
+    left: -5em;
+    z-index: 17;
+    
+  }
+
   &__trunk {
+    position: relative;
     width: 40px;
     height: 45px;
     background-color: rgb(80, 38, 8);
+    border: 2px solid black;
+    z-index: 19;
   }
+
 }
 .background {
   transform: translateX(0);
