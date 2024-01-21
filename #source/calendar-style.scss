@@ -1,40 +1,52 @@
 @import 'common-style.scss';
-//Анимация
 
-@keyframes snowfall {
-   0% {
-     transform: translate3d(0, 0, 0);
+$white: rgb(255, 255, 255);
+$grey:#a2a2a2;
+$green:#042D29;
+$green-2: #25330F;
+$yellow:rgb(243,218,11);
+$red:#800000;
+$brown:#4b280a;
+
+$wave-1:#FFFAFA;
+$wave-2:#DCDCDC;
+$wave-3:#949494;
+
+@media (max-width: 600px) {
+   
+
+}
+//контент
+.content {
+   background-color: $grey;
+   z-index: 5;
+   position: relative;
+
+   &__block {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    }
-   100% {
-     transform: translate3d(0, 100vh, 0);
+   &__back {
+      position:relative;
+   }
+   &__waves {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+   }
+   &__snowmen {
+      position:fixed;
+   }
+   &__deer {
+      position: fixed;
+      z-index: 100;
    }
 }
-@keyframes wave {
-   0% {
-      opacity: 0;
-   }
-   30% {
-      opacity: 0.4;
-   }
-   60% {
-      opacity: 0.8;
-   }
-   100% {
-      opacity: 1;
-   }
-}
-@keyframes snowmen {
-   0% {
-      opacity: 0;
-      transform: scale(0.1) rotate(180deg);
-
-   }
-   100% {
-      opacity: 1;
-      transform: scale(1);
-   }
-}
-
+//олени
 @keyframes move-sled {
    0% { 
       offset-distance: 0%;
@@ -74,37 +86,6 @@
    }
    
 }
-//контент
-.content {
-   background-color: $color-8;
-   z-index: 5;
-   position: relative;
-
-   &__block {
-   width: 100%;
-   height: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   }
-   &__back {
-      position:relative;
-   }
-   &__waves {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      overflow: hidden;
-   }
-   &__snowmen {
-      position:fixed;
-   }
-   &__deer {
-      position: fixed;
-      z-index: 100;
-   }
-}
-//олени
 .deer-1 img {
    margin-top: 40px;
       width: 300px;
@@ -112,14 +93,14 @@
    offset-path: path("M1504,193 C438,26 150,10 -346,56");
    offset-rotate: reverse;
    animation: move-sled 10s 2s ease-in-out infinite,
-               jumping 1s 2s ease-in-out infinite forwards;
+            jumping 1s 2s ease-in-out infinite forwards;
 }
 .deer-2 img {
    opacity:0.8;
    margin-top: 30px;
       width: 200px;
       height: 200px;
-   offset-path: path("M1504,193 C438,26 120,10 -346,56");
+      offset-path: path("M1504,193 C438,26 120,10 -346,56");
       offset-rotate: reverse;
       animation: move-sled 8s 4s ease-in-out infinite,
                   jumping 1s 2s ease-in-out infinite forwards; 
@@ -135,6 +116,21 @@
                jumping 1s 2s ease-in infinite forwards;
 }
 //сугробы
+@keyframes wave {
+   0% {
+      opacity: 0;
+   }
+   30% {
+      opacity: 0.4;
+   }
+   60% {
+      opacity: 0.8;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
 .wave-1, .wave-2 {
    position: fixed;
    width: 100%;
@@ -161,7 +157,7 @@
    --size: 1vw;
    width: var(--size);
    height: var(--size);
-   background: $color-7;
+   background: $white;
    border-radius: 50%;
    position: absolute;
    top: -5vh;
@@ -175,24 +171,31 @@
      animation: snowfall #{5 + random(10)}s linear infinite;
    }
 }
-
+@keyframes snowfall {
+   0% {
+     transform: translate3d(0, 0, 0);
+   }
+   100% {
+     transform: translate3d(0, 100vh, 0);
+   }
+}
 //снеговик
 .circle-1, .circle-2, .circle-3 {
    opacity: 0;
    position: relative;
    border-radius: 45%;
    background-color: $wave-1;
-   border: 3px solid $color-6;
+   border: 3px solid $green;
    
 }
 .circle-1 {
    width: 80px;
    height: 80px;
-   top: 215px;
+   top: 25em;
    left:90px;
    z-index:20;
    box-shadow: 
-      inset 3px -6px 1px $color-8,
+      inset 3px -6px 1px $grey,
       inset 10px -20px 4px $wave-2;
    position:relative;
    animation: snowmen 300ms 0.5s ease-in-out;
@@ -230,11 +233,11 @@
    opacity:0;
    width: 120px;
    height: 120px;
-   top: 200px;
+   top: 24em;
    left:80px;
    z-index: 19;
    box-shadow: 
-      inset -2px -5px 1px $color-8,
+      inset -2px -5px 1px $grey,
       inset 15px -25px 4px $wave-2;
       animation: snowmen 600ms 0.5s ease-in-out;
       animation-fill-mode: forwards;
@@ -267,11 +270,11 @@
 .circle-3 {
    width: 160px;
    height: 140px;
-   top: 190px;
+   top: 23em;
    left:60px;
    z-index: 18;
    box-shadow: 
-      inset -3px -10px 1px $color-8,
+      inset -3px -10px 1px $grey,
       inset 14px -30px 4px $wave-2;
    animation: snowmen 10ms 0.5s ease-in-out;
    animation-fill-mode: forwards;
@@ -283,132 +286,77 @@
       animation: snowmen 300ms 4s ease-in-out;
       animation-fill-mode: forwards;
    }
-   &__before {
-   content:"";
-  display: block;
-  position: absolute;
-  width: 60vmin;
-  height: 72vmin;
-  bottom: 3vmin;
-  left: 50%;
-  box-shadow:
-    0 -19vmin 0 -18vmin,
-    0 -26vmin 0 -22vmin #837,
-    0 -40vmin 0 -22vmin;
-  border-radius: 18.5vmin 18.5vmin 0 0;
-  transform-origin: top center;
-  transform: translate(-50%, 0) rotate(3deg);
-  background-image:
-    linear-gradient(60deg, transparent 45%, brown 0 50%, transparent 0),
-    linear-gradient(-64deg, transparent 45%, brown 0 50%, transparent 0),
-    linear-gradient(-60deg, transparent 45%, brown 0 50%, transparent 0),
-    linear-gradient(-50deg, transparent 45%, brown 0 54%, transparent 0),
-    linear-gradient(70deg, transparent 45%, brown 0 53%, transparent 0),
-    linear-gradient(23deg, orange 20%, transparent 0),
-    linear-gradient(-88deg, transparent 42%, maroon 0 50%, transparent 0),
-    linear-gradient(75deg, transparent 45%, maroon 0 50%, transparent 0),
-    linear-gradient(85deg, transparent 45%, maroon 0 50%, transparent 0),
-    linear-gradient(95deg, transparent 45%, maroon 0 50%, transparent 0),
-    linear-gradient(110deg, transparent 45%, maroon 0 48%, transparent 0),
-    linear-gradient(80deg, transparent 45%, maroon 0 48%, transparent 0),
-    linear-gradient(102deg, transparent 45%, maroon 0 51%, transparent 0)
-    ;
-  background-size: 
-    20% 50%,
-    18% 45%,
-    9% 11%,
-    9% 11%,
-    9% 11%,
-    16% 20%,
-    22% 65%,
-    20% 20%,
-    20% 25%,
-    25% 20%,
-    18% 20%,
-    22% 22%,
-    18% 21%
-    ;
-  background-position: 
-    90% 50%,
-    14% 55%,
-     6% 75%,
-     5% 73%,
-    13% 75%,
-    60% 0%,
-    102% 92%,
-    100% 20%,
-    103% 15%,
-    109% 19%,
-    109% 17%,
-    102.5% 15%,
-    106% 16%
-    ;
-  background-repeat: no-repeat; }
-   &::before {
-      width: 120px;
-      height: 120px;
-      top:-100px;
-      left:-10px;
-      border-radius: 45%;
-      border-left: 4px solid $color-9;
-   }
-   &::after {
-      width: 120px;
-      height: 120px;
-      top:-100px;
-      left:30px;
-      border-radius: 45%;
-      border-right: 4px solid $color-9;
-   }
    
+   &::before {
+      width: 96px;
+      height: 80px;
+      top:-100px;
+      left:90px;
+      background: rgb(116,59,16);
+      background: linear-gradient(232deg, rgba(116,59,16,0) 41%, rgba(70,35,10,1) 43%, rgba(0,0,0,1) 45%, rgba(93,47,13,1) 47%, rgba(116,59,16,0) 48%);
+ }
+   &::after {
+      width: 108px;
+      height: 80px;
+      top:-100px;
+      left:-28px;
+      background: rgb(116,59,16);
+      background: linear-gradient(128deg, rgba(116,59,16,0) 41%, rgba(70,35,10,1) 43%, rgba(0,0,0,1) 45%, rgba(93,47,13,1) 47%, rgba(116,59,16,0) 48%);
+   }
 }
 .face {
    position: relative;
    z-index: 20;
-  &::after {
+   &::before {
       opacity:0;
-      content: '';
-      position: absolute; 
-      border-radius: 120px; 
-      border: 15px solid transparent;
-      border-left: 70px solid $color-3;
-      top: -95px;
-      left: 127px; 
-      animation: snowmen 500ms 2s ease-in-out;
+      content:'';
+      position: absolute;
+      top: 5em;
+      left: 120px;
+      width: 30px;
+      height: 30px;
+      border-bottom: 4px solid $green;
+      border-radius: 35%;
+      animation: snowmen 400ms 3s ease-in-out;
       animation-fill-mode: forwards;
-  }
-  &::before {
-   opacity:0;
-   content:'';
-   position: absolute;
-   top: -96px;
-   left: 120px;
-   width: 30px;
-   height: 30px;
-   border-bottom: 4px solid $color-6;
-   border-radius: 35%;
-   animation: snowmen 400ms 3s ease-in-out;
-   animation-fill-mode: forwards;
-  }
+   }
+}
+@keyframes snowmen {
+   0% {
+      opacity: 0;
+      transform: scale(0.1) rotate(180deg);
+
+   }
+   100% {
+      opacity: 1;
+      transform: scale(1);
+   }
 }
 //карточки
 .calendar {
    display: grid;
    width: 80%;
-   min-height: 100vh;
+   max-width: 900px;
+   margin: 10% auto 2rem auto;
+   grid-template-columns: repeat(3, 1fr);
    grid-template-rows: auto;
-   grid-gap: 15px;
-   grid-template-columns: repeat(7, 1fr);
-   grid-template-areas:
-      "day5 day17 day15 day6 day22 day14 day3 "
-      "day23 day1  day24 day24 day20 day29 day19"
-      "day25 day18 day24 day24 day30 day12 day9"
-      "day7 day4 day13 day11 day21 day27 day27"
-      "day28 day10 day2 day8 day31 day16 day26";
-   z-index:500;
-   padding: 60px 20px 30px 170px;
+   grid-gap: 2em;
+   transform: translate3d(0px, 0px, 0px);
    justify-content: center;
-
+   grid-template-areas:
+      " day12 day10 day8"
+      "day9 day24  day11"
+      ". day2 day13"
+      ". day18 day4"
+      "day20 day1 day7"
+      "day5 day14 day17"
+      "day16 day23 day6"
+      "day15 day21 day19"
+      "day25 day28 day31"
+      "day29 day30 day26"
+      "day22 day3 day27"
+      ;
+   
    &__card {
       min-width: 8rem;
       min-height: 8rem;
@@ -416,6 +364,64 @@
       border: 1px dotted black;
    }
 }
+@media (min-width: 600px) {
+   .calendar {
+      display: grid;
+      width: 80%;
+      max-width: 80%;
+      min-height: 100vh;
+      grid-template-rows: auto;
+      grid-gap: 1em;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+         " day12 day10 day8"
+         "day3 day24  day11"
+         "day22  day2 day13"
+         "day9 day18 day4"
+         "day20 day1 day7"
+         "day5 day14 day17"
+         "day16 day23 day6"
+         "day15 day21 day19"
+         "day25 day28 day31"
+         "day29 day30 day26"
+         ". day27 .";
+      z-index:500;
+      padding: 30px 40px 30px 170px;
+      justify-content: center;
+   }
+   .calendar__card {
+      width: 100%;
+      height: 100%;
+      perspective: 1000px;
+      border: 1px dotted black;
+   }
+}
+@media (min-width: 1024px) {
+   .calendar {
+      display: grid;
+      width: 80%;
+      max-width: 80%;
+      min-height: 100vh;
+      grid-template-rows: auto;
+      grid-gap: 1em;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-areas:
+         "day5 day17 day15 day6 day22"
+         "day23 day1  day24 day24 day20 "
+         "day25 day18 day24 day24 day30 "
+         "day7 day4 day13 day11 day21 "
+         "day28 day10 day2 day8 day31 "
+         "day14 day3 day29 day19 day12"
+         "day9 day27 day27 day16 day26"
+         ;
+      z-index:500;
+      padding: 60px 20px 30px 170px;
+      justify-content: center;
+   }
+   
+}
+
+
 .card {
    position:relative;
 }
@@ -485,7 +491,7 @@
    .card--22 {
       grid-area: day22;
    }
-   card--23 {
+   .card--23 {
       grid-area: day23;
    }
    .card--24 {
@@ -535,22 +541,22 @@
    transform: rotateY(180deg);
 }
 .front {
-   background-color: $color-4;
-   border: 1px solid $color-7;
+   background-color: $red;
+   border: 1px solid $white;
    }
    .front span {
       display: block;
-      background-color: $color-3;
-      font-size: 24px;
+      background-color: $yellow;
+      font-size: 2em;
       font-weight: 600;
       border-radius: 0px;
-      width: 60px;
-      height: 60px;
-      padding: 23px;
-      text-align: bottom left;
-      border: 3px solid $color-9;  
+      width: 50%;
+      height: 60%;
+      padding: 1em;
+      text-align: center;
+      border: 3px solid $brown;  
       position: relative;
-      box-shadow: inset 0px 0px 8px $color-7;
+      box-shadow: inset 0px 0px 8px $white;
    }
    .front span:before {
       position: absolute;
@@ -559,7 +565,7 @@
       left: 16px;
       width: 6px;
       height: 100%;
-      border-left: 3px solid $border;
+      border-left: 3px solid $brown;
    }
    .front span:after {
       position: absolute;
@@ -568,15 +574,15 @@
       left: 0;
       width: 100%;
       height: 100%;
-      border-top: 3px solid $border;
+      border-top: 3px solid $brown;
    }
 .back {
-   background-color: $color-2;
+   background-color: $green-2;
 }
-.back img {
-   max-width: 100%;
-   min-width: 100%;
-   height: auto;
+.back span {
+   color: $wave-1;
+   text-align: center;
+   padding: 5px;
 }
 
 //Кнопка
