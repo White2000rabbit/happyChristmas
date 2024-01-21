@@ -226,6 +226,8 @@ nav, footer, header {
 }
 
 .buttons__home {
+  width: 20em;
+  height: 3em;
   right: 60px;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
@@ -260,24 +262,26 @@ nav, footer, header {
             transform: translateY(0%);
   }
   20% {
-    -webkit-transform: translateY(300px);
-            transform: translateY(300px);
+    -webkit-transform: translateY(800px);
+            transform: translateY(800px);
   }
   40% {
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px);
   }
   60% {
+    -webkit-transform: translateY(600px);
+            transform: translateY(600px);
+  }
+  80% {
     -webkit-transform: translateY(300px);
             transform: translateY(300px);
   }
-  80% {
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-  }
   100% {
-    -webkit-transform: translateY(300px) rotate(360deg);
-            transform: translateY(300px) rotate(360deg);
+    -webkit-transform: translateY(800px) rotate(360deg);
+            transform: translateY(800px) rotate(360deg);
+    width: 35vmin;
+    height: 10vmin;
   }
 }
 @keyframes jumping {
@@ -286,24 +290,26 @@ nav, footer, header {
             transform: translateY(0%);
   }
   20% {
-    -webkit-transform: translateY(300px);
-            transform: translateY(300px);
+    -webkit-transform: translateY(800px);
+            transform: translateY(800px);
   }
   40% {
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px);
   }
   60% {
+    -webkit-transform: translateY(600px);
+            transform: translateY(600px);
+  }
+  80% {
     -webkit-transform: translateY(300px);
             transform: translateY(300px);
   }
-  80% {
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-  }
   100% {
-    -webkit-transform: translateY(300px) rotate(360deg);
-            transform: translateY(300px) rotate(360deg);
+    -webkit-transform: translateY(800px) rotate(360deg);
+            transform: translateY(800px) rotate(360deg);
+    width: 35vmin;
+    height: 10vmin;
   }
 }
 .buttons__home::after {
@@ -356,9 +362,14 @@ nav, footer, header {
 }
 
 .gift {
+  --red:rgba(255,0,36,1);
+  --dark-red:rgba(97,0,23,1);
+  --yellow: rgb(255,186,0);
+  --yellow-light:rgb(255,244,0);
+  --lemon: rgb(254,254,34);
   position: absolute;
-  top: 300px;
-  right: 7.6em;
+  top: 107vmin;
+  right: 20vmin;
   -webkit-perspective: 1000px;
           perspective: 1000px;
   -webkit-perspective-origin: center -5em;
@@ -368,11 +379,6 @@ nav, footer, header {
           transform: translateY(-200vh);
   -webkit-animation: gift-jump 2s 4s ease-in-out forwards;
           animation: gift-jump 2s 4s ease-in-out forwards;
-  --red:rgba(255,0,36,1);
-  --dark-red:rgba(97,0,23,1);
-  --yellow: rgb(255,186,0);
-  --yellow-light:rgb(255,244,0);
-  --lemon: rgb(254,254,34);
 }
 @-webkit-keyframes gift-jump {
   0% {
@@ -432,11 +438,20 @@ nav, footer, header {
             transform-origin: bottom;
   }
 }
-.gift .box__side,
-.gift .gift__container {
-  width: 8em;
-  height: 8em;
+
+@media (min-width: 780px) {
+  .gift {
+    position: absolute;
+    top: 45vmin;
+    right: 20vmin;
+  }
 }
+.box__side,
+.gift__container {
+  width: 10vmin;
+  height: 10vmin;
+}
+
 .gift__container {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
@@ -444,61 +459,69 @@ nav, footer, header {
           animation: rotate 10s infinite linear;
   position: relative;
 }
-.gift .box__side {
+
+.box__side {
   position: absolute;
   width: 8em;
   height: 8em;
 }
-.gift .box__back {
+
+.box__back {
   -webkit-transform: translateZ(-4em);
           transform: translateZ(-4em);
   background: -webkit-gradient(linear, left top, right top, from(var(--yellow)), color-stop(38%, var(--yellow)), color-stop(39%, var(--dark-red)), color-stop(40%, var(--red)), color-stop(52%, var(--red)), color-stop(53%, var(--dark-red)), color-stop(54%, var(--yellow)), to(var(--yellow)));
   background: linear-gradient(90deg, var(--yellow) 0%, var(--yellow) 38%, var(--dark-red) 39%, var(--red) 40%, var(--red) 52%, var(--dark-red) 53%, var(--yellow) 54%, var(--yellow) 100%);
 }
-.gift .box__left {
+
+.box__left {
   -webkit-transform: translateX(-4em) rotateY(90deg);
           transform: translateX(-4em) rotateY(90deg);
   background: -webkit-gradient(linear, left top, right top, from(var(--yellow)), color-stop(38%, var(--yellow)), color-stop(39%, var(--dark-red)), color-stop(40%, var(--red)), color-stop(52%, var(--red)), color-stop(53%, var(--dark-red)), color-stop(54%, var(--yellow)), to(var(--yellow)));
   background: linear-gradient(90deg, var(--yellow) 0%, var(--yellow) 38%, var(--dark-red) 39%, var(--red) 40%, var(--red) 52%, var(--dark-red) 53%, var(--yellow) 54%, var(--yellow) 100%);
 }
-.gift .box__right {
+
+.box__right {
   -webkit-transform: translateX(4em) rotateY(90deg);
           transform: translateX(4em) rotateY(90deg);
   background: -webkit-gradient(linear, left top, right top, from(var(--yellow)), color-stop(38%, var(--yellow)), color-stop(39%, var(--dark-red)), color-stop(40%, var(--red)), color-stop(52%, var(--red)), color-stop(53%, var(--dark-red)), color-stop(54%, var(--yellow)), to(var(--yellow)));
   background: linear-gradient(90deg, var(--yellow) 0%, var(--yellow) 38%, var(--dark-red) 39%, var(--red) 40%, var(--red) 52%, var(--dark-red) 53%, var(--yellow) 54%, var(--yellow) 100%);
 }
-.gift .box__top {
+
+.box__top {
   -webkit-transform: translateY(-4em) rotateX(90deg);
           transform: translateY(-4em) rotateX(90deg);
   background-color: var(--yellow-light);
   background: -webkit-gradient(linear, left top, right top, from(rgba(255, 244, 0, 0)), color-stop(41%, rgba(254, 254, 0, 0)), color-stop(43%, var(--dark-red)), color-stop(45%, var(--red)), color-stop(55%, var(--red)), color-stop(59%, var(--dark-red)), color-stop(60%, rgba(254, 254, 0, 0)), to(rgba(255, 244, 0, 0))), -webkit-gradient(linear, left top, left bottom, from(var(--yellow-light)), color-stop(40%, var(--yellow-light)), color-stop(43%, var(--dark-red)), color-stop(45%, var(--red)), color-stop(55%, var(--red)), color-stop(59%, var(--dark-red)), color-stop(60%, var(--yellow-light)), to(var(--yellow-light)));
   background: linear-gradient(90deg, rgba(255, 244, 0, 0) 0%, rgba(254, 254, 0, 0) 41%, var(--dark-red) 43%, var(--red) 45%, var(--red) 55%, var(--dark-red) 59%, rgba(254, 254, 0, 0) 60%, rgba(255, 244, 0, 0) 100%), linear-gradient(180deg, var(--yellow-light) 0%, var(--yellow-light) 40%, var(--dark-red) 43%, var(--red) 45%, var(--red) 55%, var(--dark-red) 59%, var(--yellow-light) 60%, var(--yellow-light) 100%);
 }
-.gift .box__bottom {
+
+.box__bottom {
   -webkit-transform: translateY(4em) rotateX(90deg);
           transform: translateY(4em) rotateX(90deg);
   background: rgb(254, 254, 34);
 }
-.gift .box__front {
+
+.box__front {
   -webkit-transform: translateZ(4em);
           transform: translateZ(4em);
   background: var(--lemon);
   background: -webkit-gradient(linear, left top, right top, from(var(--lemon)), color-stop(38%, var(--lemon)), color-stop(39%, var(--dark-red)), color-stop(40%, var(--red)), color-stop(52%, var(--red)), color-stop(53%, var(--dark-red)), color-stop(54%, var(--lemon)), to(var(--lemon)));
   background: linear-gradient(90deg, var(--lemon) 0%, var(--lemon) 38%, var(--dark-red) 39%, var(--red) 40%, var(--red) 52%, var(--dark-red) 53%, var(--lemon) 54%, var(--lemon) 100%);
 }
+
 @-webkit-keyframes rotate {
   100% {
     -webkit-transform: rotateY(360deg);
             transform: rotateY(360deg);
   }
 }
+
 @keyframes rotate {
   100% {
     -webkit-transform: rotateY(360deg);
             transform: rotateY(360deg);
   }
 }
-
 .santa {
   --skin: #fca;
   --eyes: #630a;
@@ -508,13 +531,11 @@ nav, footer, header {
   --suit: #a00;
   --belt: #2e1905;
   --belt-buckle: gold;
-  width: 20em;
-  height: 20em;
+  width: 50vmin;
+  height: 50vmin;
   position: absolute;
   top: 19em;
-  left: 30em;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  left: 14vmin;
 }
 .santa__head {
   position: absolute;
@@ -537,8 +558,8 @@ nav, footer, header {
   height: 3%;
   background: var(--eyes);
   border-radius: 50%;
-  -webkit-box-shadow: 6.66vmin 0 var(--eyes);
-          box-shadow: 6.66vmin 0 var(--eyes);
+  -webkit-box-shadow: 6vmin 0 var(--eyes);
+          box-shadow: 6vmin 0 var(--eyes);
   z-index: 301;
 }
 .santa__cheeks {
@@ -549,8 +570,8 @@ nav, footer, header {
   height: 3%;
   background: var(--cheeks);
   border-radius: 50%;
-  -webkit-box-shadow: 7.25vmin 0 var(--cheeks);
-          box-shadow: 7.25vmin 0 var(--cheeks);
+  -webkit-box-shadow: 5em 0 var(--cheeks);
+          box-shadow: 5em 0 var(--cheeks);
   z-index: 301;
 }
 .santa__mustache {
@@ -631,8 +652,8 @@ nav, footer, header {
   content: "";
   display: block;
   position: absolute;
-  right: 4em;
-  top: -1em;
+  right: 10vmin;
+  top: -4vmin;
   width: 8vmin;
   height: 8vmin;
   border-radius: 50%;
@@ -708,7 +729,7 @@ nav, footer, header {
   height: 13%;
   background: black;
   -webkit-box-shadow: 11em 0 black;
-  box-shadow: 13em 0 black;
+  box-shadow: 30vmin 0 black;
   border-radius: 60%;
 }
 .santa__leg {
@@ -742,9 +763,9 @@ nav, footer, header {
   content: "";
   display: block;
   position: absolute;
-  top: 3.5em;
-  left: 12%;
-  width: 3em;
+  top: 8vmin;
+  left: 2vmin;
+  width: 6vmin;
   height: 2em;
   border-radius: 40%;
   border-top: 3px solid white;

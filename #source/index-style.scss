@@ -55,6 +55,8 @@
 
 //Кнопка
 .buttons__home {
+  width: 20em;
+  height: 3em;
   right: 60px;
   transform: translateY(0px);
   animation: 
@@ -76,19 +78,21 @@
       transform: translateY(0%);
     }
     20% {
-      transform: translateY(300px);
+      transform: translateY(800px);
     }
     40% {
-      transform: translateY(200px);
+      transform: translateY(400px);
     }
     60% {
-      transform: translateY(300px);
+      transform: translateY(600px);
     }
     80% {
-      transform: translateY(100px);
+      transform: translateY(300px);
     }
     100% {
-      transform: translateY(300px) rotate(360deg);
+      transform: translateY(800px) rotate(360deg);
+      width: 35vmin;
+      height: 10vmin;
     }
   }
 
@@ -146,9 +150,14 @@
 }
 
 .gift {
+  --red:rgba(255,0,36,1);
+  --dark-red:rgba(97,0,23,1);
+  --yellow: rgb(255,186,0);
+  --yellow-light:rgb(255,244,0);
+  --lemon: rgb(254,254,34);
   position: absolute;
-  top: 300px;
-  right: 7.6em;
+  top: 107vmin;
+    right: 20vmin;
   perspective: 1000px;
   perspective-origin: center -5em;
   z-index:500;
@@ -177,46 +186,45 @@
       transform-origin: bottom;
     }
   }
+}
+
+@media(min-width:780px) {
+  .gift {
+    position: absolute;
+    top: 45vmin;
+    right: 20vmin;
+  }
+}
 .box__side,
 .gift__container {
-  width: 8em;
-  height: 8em;
-  }
+  width: 10vmin;
+  height: 10vmin;
+}
 
-&__container {
+.gift__container {
   transform-style: preserve-3d;
   animation: rotate 10s infinite linear;
   position: relative;
   }
---red:rgba(255,0,36,1);
---dark-red:rgba(97,0,23,1);
---yellow: rgb(255,186,0);
---yellow-light:rgb(255,244,0);
---lemon: rgb(254,254,34);
 
 .box__side {
   position: absolute;
   width: 8em;
   height: 8em;;
   }
-
 .box__back {
   transform: translateZ(-4em);
   background: linear-gradient(90deg,var(--yellow) 0%, var(--yellow) 38%, var(--dark-red) 39%, var(--red) 40%, var(--red) 52%, var(--dark-red) 53%, var(--yellow) 54%, var(--yellow) 100%);;
-  
-  }
-
+}
 .box__left {
   transform: translateX(-4em) rotateY(90deg);
   background: linear-gradient(90deg, var(--yellow) 0%, var(--yellow) 38%, var(--dark-red) 39%, var(--red) 40%, var(--red) 52%, var(--dark-red) 53%, var(--yellow) 54%, var(--yellow) 100%);;
   
   }
-
 .box__right {
   transform: translateX(4em) rotateY(90deg);
   background: linear-gradient(90deg, var(--yellow) 0%, var(--yellow) 38%, var(--dark-red) 39%, var(--red) 40%, var(--red) 52%, var(--dark-red) 53%, var(--yellow) 54%, var(--yellow) 100%);;
   }
-
 .box__top {
   transform: translateY(-4em) rotateX(90deg);
   background-color: var(--yellow-light);
@@ -233,12 +241,13 @@
   background: var(--lemon);
   background: linear-gradient(90deg, var(--lemon) 0%, var(--lemon) 38%, var(--dark-red) 39%, var(--red) 40%, var(--red) 52%, var(--dark-red) 53%, var(--lemon) 54%, var(--lemon) 100%);
 }
+
 @keyframes rotate {
   100% {
     transform: rotateY(360deg);
   }
 }
-}
+
 
 .santa {
   --skin: #fca;
@@ -250,12 +259,11 @@
   --belt: #2e1905;
   --belt-buckle: gold;
 
-  width: 20em;
-  height: 20em;
+  width: 50vmin;
+  height: 50vmin;
   position: absolute;
   top: 19em;
-  left: 30em;
-  transform: translate(-50%, -50%);
+  left: 14vmin;
 
   &__head {
     position: absolute;
@@ -277,7 +285,7 @@
     height: 3%;
     background: var(--eyes);
     border-radius: 50%;
-    box-shadow: 6.66vmin 0 var(--eyes);
+    box-shadow: 6vmin 0 var(--eyes);
     z-index:301;
   }
   &__cheeks {
@@ -288,7 +296,7 @@
     height: 3%;
     background: var(--cheeks);
     border-radius: 50%;
-    box-shadow: 7.25vmin 0 var(--cheeks);
+    box-shadow: 5em 0 var(--cheeks);
     z-index:301;
   }
   &__mustache {
@@ -363,8 +371,8 @@
     content: "";
     display: block;
     position: absolute;
-    right: 4em;
-    top: -1em;
+    right: 10vmin;
+    top: -4vmin;
     width: 8vmin;
     height: 8vmin;
     border-radius: 50%;
@@ -434,7 +442,7 @@
     height: 13%;
     background: black;
     -webkit-box-shadow: 11em 0 black;
-    box-shadow: 13em 0 black;
+    box-shadow: 30vmin 0 black;
     border-radius: 60%
   }
   &__leg {
@@ -468,9 +476,9 @@
     content: "";
     display: block;
     position: absolute;
-    top: 3.5em;
-    left: 12%;
-    width: 3em;
+    top: 8vmin;
+    left: 2vmin;
+    width: 6vmin;
     height: 2em;
     border-radius: 40%;
     border-top: 3px solid white;
