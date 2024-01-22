@@ -61,7 +61,7 @@ nav, footer, header {
 
 
    &__header {
-      position: relative;
+      position: fixed;
       height: 90px;
       width: 100%;
       background-color: $color-2;
