@@ -369,7 +369,7 @@ nav, footer, header {
   --lemon: rgb(254,254,34);
   position: absolute;
   top: 107vmin;
-  right: 20vmin;
+  right: 25vmin;
   -webkit-perspective: 1000px;
           perspective: 1000px;
   -webkit-perspective-origin: center -5em;
@@ -439,13 +439,6 @@ nav, footer, header {
   }
 }
 
-@media (min-width: 780px) {
-  .gift {
-    position: absolute;
-    top: 45vmin;
-    right: 20vmin;
-  }
-}
 .box__side,
 .gift__container {
   width: 10vmin;
@@ -776,11 +769,13 @@ nav, footer, header {
 }
 
 .tree {
-  width: 30em;
+  width: 50vmin;
+  height: 50vmin;
+  position: absolute;
   -webkit-transform: translateY(-250%);
           transform: translateY(-250%);
-  top: 4em;
-  left: 25em;
+  top: 4vmax;
+  left: 10vmax;
 }
 .tree__leaves, .tree__trunk {
   margin: 0 auto;
@@ -789,49 +784,33 @@ nav, footer, header {
   position: relative;
   width: 0;
   height: 0;
-  border-left: 80px solid transparent;
-  border-right: 80px solid transparent;
-  border-bottom: 100px solid rgb(1, 141, 1);
-  border-radius: 40px;
+  border-left: 13vmin solid transparent;
+  border-right: 13vmin solid transparent;
+  border-bottom: 18vmin solid rgb(1, 141, 1);
+  border-radius: 20vmin;
   z-index: 22;
 }
 .tree__leaves:nth-child(2) {
   position: relative;
-  margin-top: -30px;
-  border-left-width: 90px;
-  border-right-width: 90px;
-  border-bottom-width: 120px;
-  border-bottom: 115px solid rgb(2, 121, 2);
+  margin-top: -5vmin;
+  border-left-width: 15vmin;
+  border-right-width: 15vmin;
+  border-bottom: 20vmin solid rgb(2, 121, 2);
   z-index: 21;
 }
 .tree__leaves:nth-child(3) {
   position: relative;
-  margin-top: -20px;
-  border-left-width: 120px;
-  border-right-width: 120px;
-  border-bottom-width: 160px;
-  border-bottom: 130px solid rgb(1, 88, 1);
+  margin-top: -7vmin;
+  border-left-width: 21vmin;
+  border-right-width: 25vmin;
+  border-bottom-width: 39vmin;
+  border-bottom: 25vmin solid rgb(1, 88, 1);
   z-index: 19;
-}
-.tree__leaves:nth-child(3)::after {
-  content: "";
-  position: absolute;
-  border-radius: 30%;
-  background-color: black;
-  opacity: 0.5;
-  width: 127px;
-  height: 30px;
-  top: 10em;
-  left: -5em;
-  z-index: 17;
-  opacity: 0;
-  -webkit-animation: isVisible 2s 5s ease-in-out forwards;
-          animation: isVisible 2s 5s ease-in-out forwards;
 }
 .tree__trunk {
   position: relative;
-  width: 40px;
-  height: 45px;
+  width: 4vmin;
+  height: 5vmin;
   background-color: rgb(80, 38, 8);
   border: 2px solid black;
   z-index: 19;
@@ -841,7 +820,7 @@ nav, footer, header {
   -webkit-transform: translateX(0);
           transform: translateX(0);
   opacity: 1;
-  width: 1500px;
+  width: 150%;
   height: 100vh;
   padding: 0;
   margin: 0;
@@ -987,7 +966,6 @@ nav, footer, header {
 .lightrope-wall__container {
   text-align: center;
   white-space: nowrap;
-  overflow: hidden;
   position: absolute;
   top: 130px;
   padding: 0;
@@ -1006,10 +984,10 @@ nav, footer, header {
   margin: 0;
   padding: 0;
   display: inline-block;
-  width: 25px;
-  height: 25px;
+  width: 5vmin;
+  height: 5vmin;
   border-radius: 50%;
-  margin: 20px;
+  margin: 12px;
   background: var(--dark-blue);
   -webkit-box-shadow: 0px 4.66667px 24px 3px var(--dark-blue);
           box-shadow: 0px 4.66667px 24px 3px var(--dark-blue);
@@ -1047,19 +1025,19 @@ nav, footer, header {
   content: "";
   position: absolute;
   background: #222;
-  width: 10px;
-  height: 9.33333px;
+  width: 2vmin;
+  height: 1vmin;
   border-radius: 3px;
   top: -7px;
-  left: 7px;
+  left: 1.5vmin;
 }
 
 .lightrope-wall__container li:after {
   content: "";
   top: -15px;
-  left: 19px;
+  left: 4vmin;
   position: absolute;
-  width: 52px;
+  width: 7vmin;
   height: 16px;
   border-bottom: solid #222 2px;
   border-radius: 50%;
@@ -1144,5 +1122,172 @@ nav, footer, header {
     background: var(--red-light);
     -webkit-box-shadow: 0px 4.66667px 24px 3px var(--red-light);
             box-shadow: 0px 4.66667px 24px 3px var(--red-light);
+  }
+}
+@media (min-width: 1200px) {
+  .tree {
+    width: 50vmin;
+    height: 50vmin;
+    position: absolute;
+    -webkit-transform: translateY(-250%);
+            transform: translateY(-250%);
+    top: 4vmax;
+    left: 10vmax;
+  }
+  .santa {
+    width: 50vmin;
+    height: 50vmin;
+    position: absolute;
+    top: 28vmin;
+    left: 14vmin;
+  }
+}
+@media (min-width: 1200px) and (min-width: 780px) {
+  .gift {
+    position: absolute;
+    top: 45vmin;
+    right: 20vmin;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .tree {
+    width: 50vmin;
+    height: 50vmin;
+    position: absolute;
+    -webkit-transform: translateY(-250%);
+            transform: translateY(-250%);
+    top: 2vmax;
+    left: 35vmax;
+  }
+  .santa {
+    width: 50vmin;
+    height: 50vmin;
+    position: absolute;
+    top: 28vmin;
+    left: 14vmin;
+  }
+  .lightrope-tree {
+    -webkit-transform: translateY(-250%);
+    transform: translateY(-250%);
+    left: 62vmin;
+    top: 17vmin;
+    opacity: 1;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) and (min-width: 780px) {
+  .gift {
+    position: absolute;
+    top: 45vmin;
+    right: 20vmin;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .tree {
+    width: 50vmin;
+    height: 50vmin;
+    position: absolute;
+    -webkit-transform: translateY(-250%);
+            transform: translateY(-250%);
+    top: -5vmin;
+    left: 43vmin;
+  }
+  .santa {
+    width: 50vmin;
+    height: 50vmin;
+    position: absolute;
+    top: 22vmin;
+    left: 14vmin;
+  }
+  .lightrope-wall__container li {
+    position: relative;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 5vmin;
+    height: 5vmin;
+    border-radius: 50%;
+    margin: 12px;
+    background: var(--dark-blue);
+    -webkit-box-shadow: 0px 4.66667px 24px 3px var(--dark-blue);
+            box-shadow: 0px 4.66667px 24px 3px var(--dark-blue);
+    -webkit-animation: flash-1 2s infinite;
+            animation: flash-1 2s infinite;
+  }
+  .lightrope-tree {
+    -webkit-transform: translateY(-250%);
+    transform: translateY(-250%);
+    left: 60vmin;
+    top: 10vmin;
+    opacity: 1;
+  }
+  .gift {
+    position: absolute;
+    top: 45vmin;
+    right: 20vmin;
+  }
+}
+@media (max-width: 767px) {
+  .tree {
+    width: 50vmin;
+    height: 50vmin;
+    position: absolute;
+    -webkit-transform: translateY(-250%);
+    transform: translateY(-250%);
+    top: -2vmax;
+    left: 33vmax;
+  }
+  .santa {
+    width: 50vmin;
+    height: 50vmin;
+    position: absolute;
+    top: 25vmin;
+    left: 14vmin;
+  }
+  .lightrope-tree {
+    -webkit-transform: translateY(-250%);
+            transform: translateY(-250%);
+    left: 55vmin;
+    top: 7vmin;
+    opacity: 1;
+  }
+  .gift {
+    position: absolute;
+    top: 88vmin;
+    right: 21vmin;
+  }
+}
+@media (max-width: 480px) {
+  .tree {
+    width: 50vmin;
+    height: 50vmin;
+    position: absolute;
+    -webkit-transform: translateY(-250%);
+            transform: translateY(-250%);
+    top: 10vmin;
+    left: 35vmin;
+  }
+  .santa {
+    width: 50vmin;
+    height: 50vmin;
+    position: absolute;
+    top: 35vmin;
+    left: 14vmin;
+  }
+  .lightrope-tree {
+    -webkit-transform: translateY(-250%);
+            transform: translateY(-250%);
+    left: 47vmin;
+    top: 10vmin;
+    opacity: 1;
+  }
+  .gift {
+    position: absolute;
+    top: 100vmin;
+    right: 20vmin;
   }
 }
