@@ -1417,7 +1417,7 @@ nav, footer, header {
     opacity: 0;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (min-width: 650px) {
   .tree {
     width: 50vmin;
     height: 50vmin;
@@ -1542,7 +1542,7 @@ nav, footer, header {
     opacity: 0;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 650px) and (min-width: 481px) {
   .tree {
     width: 50vmin;
     height: 50vmin;
