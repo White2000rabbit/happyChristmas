@@ -55,13 +55,14 @@
 .buttons__home {
   position: relative;
   z-index: 1000;
-  width: 20em;
+  width: 13em;
   height: 3em;
   right: 2vmin;
   transform: translateY(0px);
   animation: 
     jumping 3s 6s ease-in-out forwards, 
     lighting 3s 7s ease-in-out infinite;
+
   @keyframes lighting {
     0% {
       background-color:$wave-2;
@@ -192,7 +193,6 @@
   width: 6em;
   height: 6em;
 }
-
 .gift__container {
   transform-style: preserve-3d;
   animation: rotate 10s infinite linear;
@@ -243,7 +243,7 @@
   --cheeks: #f001;
   --beard: rgb(206, 204, 204);
   --mustache: #fff;
-  --suit: #a00;
+  --suit: rgb(207, 2, 2);
   --belt: #2e1905;
   --belt-buckle: gold;
 
@@ -439,7 +439,7 @@
     left: 29%;
     width: 19%;
     height: 25%;
-    background: rgb(131, 1, 1);
+    background: rgb(187, 1, 1);
     transform: skew(2deg);
     background-image: linear-gradient(#0002, transparent 70%, var(--belt) 0);
     border: 2px solid black;
@@ -530,11 +530,11 @@
   transform: translateX(0);
   opacity:1;
   width: 150%;
-  height: 737px;
+  height: 100vh;
   padding: 0;
   margin:0;
-  background: rgb(255,243,145);
-  background: linear-gradient(180deg, rgba(255,243,145,1) 0%, rgba(255,243,145,1) 59%, rgba(115,72,27,1) 60%, rgba(3,3,3,1) 62%, rgba(115,72,27,1) 62%, rgba(3,3,3,1) 66%, rgba(115,72,27,1) 66%, rgba(3,3,3,1) 70%, rgba(115,72,27,1) 70%, rgba(3,3,3,1) 75%, rgba(115,72,27,1) 75%, rgba(3,3,3,1) 79%, rgba(115,72,27,1) 79%, rgba(3,3,3,1) 84%, rgba(115,72,27,1) 84%, rgba(3,3,3,1) 89%, rgba(115,72,27,1) 89%, rgba(3,3,3,1) 95%, rgba(115,72,27,1) 95%, rgba(3,3,3,1) 100%, rgba(115,72,27,1) 100%);
+  background: rgb(252, 243, 176);
+  background: linear-gradient(180deg, rgb(252, 243, 176) 0%, rgb(252, 243, 176) 59%, rgba(115,72,27,1) 60%, rgba(3,3,3,1) 62%, rgba(115,72,27,1) 62%, rgba(3,3,3,1) 66%, rgba(115,72,27,1) 66%, rgba(3,3,3,1) 70%, rgba(115,72,27,1) 70%, rgba(3,3,3,1) 75%, rgba(115,72,27,1) 75%, rgba(3,3,3,1) 79%, rgba(115,72,27,1) 79%, rgba(3,3,3,1) 84%, rgba(115,72,27,1) 84%, rgba(3,3,3,1) 89%, rgba(115,72,27,1) 89%, rgba(3,3,3,1) 95%, rgba(115,72,27,1) 95%, rgba(3,3,3,1) 100%, rgba(115,72,27,1) 100%);
 
   @keyframes toRight{
     0% {
@@ -545,6 +545,7 @@
     }
   }
 }
+
 .lightrope-tree {
   transform: translateY(-250%);
   left: 36em;
@@ -555,6 +556,7 @@
   --yellow:rgb(254,254,34);
   --green:rgb(52,201,36);
   --dark-blue:rgb( 0,47,85);
+  
   &__container {
     width: 30vmin;
     position:relative;
@@ -765,7 +767,7 @@
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (orientation:landscape) {
   .tree { 
     width: 50vmin;
     height: 50vmin;
@@ -821,7 +823,7 @@
     }
 }
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1199px) and  (orientation:landscape) {
   .tree { 
     width: 50vmin;
     height: 50vmin;
@@ -878,10 +880,10 @@
     left: -3vmin;
   }
 }
-@media (max-width:991px) and (min-width:768px) {
+@media (max-width:991px) and (min-width:768px) and (orientation:landscape) {
   .gift {
     top: 78vmin;
-    right: -9vmin;
+    right: 9vmin;
   }
   .tree { 
     width: 126vmin;
@@ -898,6 +900,8 @@
   .lightrope-tree__item:nth-child(1) {
     top: 48vmin;
     left: -2vmin;
+    width: 40px;
+    height:40px;
   }
   .lightrope-tree__item:nth-child(2) {
     top: 51vmin;
@@ -906,6 +910,8 @@
   .lightrope-tree__item:nth-child(3) {
     top: 33vmin;
     left: 6vmin;
+    width: 40px;
+    height:40px;
   }
   .lightrope-tree__item:nth-child(4) {
     top: 29vmin;
@@ -913,9 +919,13 @@
   .lightrope-tree__item:nth-child(5) {
     top: 16vmin;
     left: 4vmin;
+    width: 40px;
+    height:40px;
   }
   .lightrope-tree__item:nth-child(6) {
     top: 28vmin;
+    width: 40px;
+    height:40px;
   }
   .lightrope-tree__item:nth-child(7) {
     top: 44vmin;
@@ -949,7 +959,7 @@
     }
   }
 }
-@media (max-width: 767px) and (min-width:650px)  {
+@media (max-width: 767px) and (min-width:651px)  {
   .tree { 
     width: 50vmin;
       height: 50vmin;
@@ -1035,7 +1045,7 @@
       }
   }
 }
-@media(max-width:650px) and (min-width: 481px) {
+@media(max-width:650px) and (min-width: 481px) and (orientation:portrait) {
   .tree { 
         width: 50vmin;
           height: 50vmin;
@@ -1074,7 +1084,7 @@
             transform: translateY(300px);
           }
           100% {
-            transform: translateY(500px) rotate(360deg);
+            transform: translateY(400px) rotate(360deg);
             width: 35vmin;
             height: 10vmin;
           }
@@ -1115,84 +1125,8 @@
     left: 9vmin;
     top: 12vmin
   }
-}
-@media(max-width:650px) and (min-width: 300px) and (min-height:747px) {
-  .tree { 
-        width: 50vmin;
-          height: 50vmin;
-          position: absolute;
-          transform: translateY(-250%);
-          top: 44vmin;
-          left: 38vmin;
-  }
-  .santa {
-        width: 50vmin;
-        height: 50vmin;
-        position: absolute;
-        top: 70vmin;
-        left: 14vmin;
-  }
-  .gift {
-    top: 133vmin;
-    right: 66vmin;
-  }
-  .buttons__home {
-        @keyframes jumping {
-          0% {
-            transform: translateY(0%);
-          }
-          20% {
-            transform: translateY(400px);
-          }
-          40% {
-            transform: translateY(200px);
-          }
-          60% {
-            transform: translateY(530px);
-          }
-          80% {
-            transform: translateY(300px);
-          }
-          100% {
-            transform: translateY(530px) rotate(360deg);
-            width: 35vmin;
-            height: 10vmin;
-          }
-        }
-  }
-  .lightrope-tree {
-    left: 55vmin;
-    top: 53.8vmin;
-  }
-  .lightrope-tree__item:nth-child(1) {
-    top: 48vmin;
-    left: -2vmin;
-  }
-  .lightrope-tree__item:nth-child(2) {
-    top: 48vmin;
-    left: 13vmin;
-
-  }
-  .lightrope-tree__item:nth-child(3) {
-    top: 31vmin;
-    left: 9vmin;
-  }
-  .lightrope-tree__item:nth-child(4) {
-    top: 25vmin;
-  }
-  .lightrope-tree__item:nth-child(5) {
-    top: 16vmin;
-    left: 4vmin;
-  }
-  .lightrope-tree__item:nth-child(6) {
-    top: 33vmin;
-    left: 0vmin;
-  }
-  .lightrope-tree__item:nth-child(7) {
-    top: 44vmin;
-  }
-  .lightrope-tree__item:nth-child(8) {
-    left: 9vmin;
-    top: 12vmin
-  }
+  .background {
+    background: rgb(252, 243, 176);
+    background: linear-gradient(180deg, rgb(252, 243, 176) 0%,rgb(252, 243, 176) 39%, rgba(115,72,27,1) 40%, rgba(3,3,3,1) 42%, rgba(115,72,27,1) 42%, rgba(3,3,3,1) 46%, rgba(115,72,27,1) 46%, rgba(3,3,3,1) 50%, rgba(115,72,27,1) 50%, rgba(3,3,3,1) 55%, rgba(115,72,27,1) 55%, rgba(3,3,3,1) 59%, rgba(115,72,27,1) 59%, rgba(3,3,3,1) 64%, rgba(115,72,27,1) 64%, rgba(3,3,3,1) 69%, rgba(115,72,27,1) 69%, rgba(3,3,3,1) 75%, rgba(115,72,27,1) 75%, rgba(3,3,3,1) 80%, rgba(115,72,27,1) 80%, rgba(3,3,3,1) 89%, rgba(115,72,27,1) 89%, rgba(3,3,3,1) 95%, rgba(115,72,27,1) 95%, rgba(3,3,3,1) 10%, rgba(115,72,27,1) 100%);
+  }  
 }
