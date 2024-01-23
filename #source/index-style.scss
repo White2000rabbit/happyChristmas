@@ -18,7 +18,6 @@
     transform: translateY(40%);
   }
 }
-
 @keyframes isVisible {
   0% {
     opacity: 0;
@@ -30,7 +29,6 @@
     opacity: 5;
   }
 }
-
 @keyframes lights-fall {
   0% {
     transform:  translateY(-150vh);
@@ -239,8 +237,6 @@
     transform: rotateY(360deg);
   }
 }
-
-
 .santa {
   --skin: #fca;
   --eyes: #630a;
@@ -480,7 +476,6 @@
     left: -4%;
   }
 }
-
 .tree { 
   width: 50vmin;
   height: 50vmin;
@@ -792,8 +787,8 @@
       right: 20vmin;
   }
   .lightrope-tree {
-    left: 25em;
-    top: 2.9em; 
+    left: 55vmin;
+    top: -4vmin; 
   }
   .lightrope-tree__container {
     width: 30vmin;
@@ -801,6 +796,30 @@
     top: 0vmin;
     left: -3vmin;
   }
+  .buttons__home {
+    @keyframes jumping {
+      0% {
+        transform: translateY(0%);
+      }
+      20% {
+        transform: translateY(400px);
+      }
+      40% {
+        transform: translateY(200px);
+      }
+      60% {
+        transform: translateY(220px);
+      }
+      80% {
+        transform: translateY(300px);
+      }
+      100% {
+        transform: translateY(220px) rotate(360deg);
+        width: 35vmin;
+        height: 10vmin;
+      }
+    }
+}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .tree { 
@@ -848,8 +867,8 @@
       }
   }
   .lightrope-tree {
-    left: 59vmin;
-    top: 3vmin;
+    left: 52vmin;
+    top: 14vmin;
   }
   .lightrope-tree__container {
     width: 30vmin;
@@ -861,9 +880,8 @@
 }
 @media (max-width:991px) and (min-width:768px) {
   .gift {
-    position: absolute;
-    top: 104vmin;
-    right: 15vmin;
+    top: 78vmin;
+    right: -9vmin;
   }
   .tree { 
     width: 126vmin;
@@ -918,20 +936,20 @@
         transform: translateY(200px);
       }
       60% {
-        transform: translateY(700px);
+        transform: translateY(460px);
       }
       80% {
         transform: translateY(300px);
       }
       100% {
-        transform: translateY(730px) rotate(360deg);
+        transform: translateY(450px) rotate(360deg);
         width: 35vmin;
         height: 10vmin;
       }
     }
   }
 }
-@media (max-width: 767px) and (min-width:650px) {
+@media (max-width: 767px) and (min-width:650px)  {
   .tree { 
     width: 50vmin;
       height: 50vmin;
@@ -1017,7 +1035,6 @@
       }
   }
 }
-
 @media(max-width:650px) and (min-width: 481px) {
   .tree { 
         width: 50vmin;
@@ -1066,6 +1083,86 @@
   .lightrope-tree {
     left: 56vmin;
     top: 30.8vmin;
+  }
+  .lightrope-tree__item:nth-child(1) {
+    top: 48vmin;
+    left: -2vmin;
+  }
+  .lightrope-tree__item:nth-child(2) {
+    top: 48vmin;
+    left: 13vmin;
+
+  }
+  .lightrope-tree__item:nth-child(3) {
+    top: 31vmin;
+    left: 9vmin;
+  }
+  .lightrope-tree__item:nth-child(4) {
+    top: 25vmin;
+  }
+  .lightrope-tree__item:nth-child(5) {
+    top: 16vmin;
+    left: 4vmin;
+  }
+  .lightrope-tree__item:nth-child(6) {
+    top: 33vmin;
+    left: 0vmin;
+  }
+  .lightrope-tree__item:nth-child(7) {
+    top: 44vmin;
+  }
+  .lightrope-tree__item:nth-child(8) {
+    left: 9vmin;
+    top: 12vmin
+  }
+}
+@media(max-width:650px) and (min-width: 300px) and (min-height:747px) {
+  .tree { 
+        width: 50vmin;
+          height: 50vmin;
+          position: absolute;
+          transform: translateY(-250%);
+          top: 44vmin;
+          left: 38vmin;
+  }
+  .santa {
+        width: 50vmin;
+        height: 50vmin;
+        position: absolute;
+        top: 70vmin;
+        left: 14vmin;
+  }
+  .gift {
+    top: 133vmin;
+    right: 66vmin;
+  }
+  .buttons__home {
+        @keyframes jumping {
+          0% {
+            transform: translateY(0%);
+          }
+          20% {
+            transform: translateY(400px);
+          }
+          40% {
+            transform: translateY(200px);
+          }
+          60% {
+            transform: translateY(530px);
+          }
+          80% {
+            transform: translateY(300px);
+          }
+          100% {
+            transform: translateY(530px) rotate(360deg);
+            width: 35vmin;
+            height: 10vmin;
+          }
+        }
+  }
+  .lightrope-tree {
+    left: 55vmin;
+    top: 53.8vmin;
   }
   .lightrope-tree__item:nth-child(1) {
     top: 48vmin;

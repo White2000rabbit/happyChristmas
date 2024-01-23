@@ -12,14 +12,13 @@ $wave-1:#FFFAFA;
 $wave-2:#DCDCDC;
 $wave-3:#949494;
 
-@media (max-width: 600px) {
-   
-
+.page__header {
+   z-index:99;
+   position: absolute;
 }
 //контент
 .content {
    background-color: $grey;
-   z-index: 5;
    position: relative;
 
    &__block {
