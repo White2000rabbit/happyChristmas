@@ -486,8 +486,8 @@
   height: 50vmin;
   position: absolute;
   transform: translateY(-250%);
-  top: 4vmax;
-  left: 10vmax;
+  --top: 4vmax;
+  --left: 10vmax;
 
   &__leaves,
   &__trunk {
@@ -561,10 +561,14 @@
   --green:rgb(52,201,36);
   --dark-blue:rgb( 0,47,85);
   &__container {
+    width: 30vmin;
+    position:relative;
+    top: 0vmin;
+    left: -3vmin;
   }
   &__item {
     transform: translateY(-150vh);
-    position: relative;
+    position: absolute;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -595,58 +599,58 @@
   &__item:nth-child(1) {
     width: 40px;
     height: 40px;
-    background-color: $color-3;
-    top: 120px;
-    left: 70px;
+    background-color: var(--yellow);
+    top: 35vmax;
+    left: 0vmax;
   }
   &__item:nth-child(2) {
     width: 30px;
     height: 30px;
     background-color: var(--red);
-    top: 70px;
-    left: 20px;
+    top: 36vmax;
+    left: 8vmax;
   }
   &__item:nth-child(3) {
     width: 40px;
     height: 40px;
     background-color: var(--green);
-    top: 90px;
-    left: 10px;
+    top: 26vmax;
+    left: 6vmax;
   }
   &__item:nth-child(4) {
     width: 20px;
     height: 20px;
     background-color: var(--blue);
-    top: 120px;
-    left: 30px;
+    top: 21vmax;
+    left: 9vmax;
   }
   &__item:nth-child(5) {
     width: 40px;
     height: 40px;
     background-color: var(--dark-blue);
-    top: 70px;
-    left: 65px;
+    top: 17vmax;
+    left: 5vmax;
   }
   &__item:nth-child(6) {
     width: 40px;
     height: 40px;
     background-color: var(--red);
-    top: 125px;
-    left: 55px;
+    top: 29vmax;
+    left: 2vmax;
   }
   &__item:nth-child(7) {
     width: 30px;
     height: 30px;
-    background-color: var(--yellow);
-    top: 100px;
-    left: 10px;
+    background-color: var(--dark-blue);
+    top: 39vmax;
+    left: 4vmax;
   }
   &__item:nth-child(8) {
     width: 30px;
     height: 30px;
-    background-color: var(--dark-blue);
-    top: 90px;
-    left: 90px;
+    background-color: var(--yellow);
+    top: 30vmax;
+    left: 9vmax;
   }
 }
   
@@ -692,7 +696,6 @@
   box-shadow: 0px 4.66667px 24px 3px var(--dark-blue);
   animation: flash-1 2s infinite;
 }
-
 .lightrope-wall__container li:nth-child(2n+1) {
   background: var(--green);
   box-shadow: 0px 4.66667px 24px 3px var(--green);
@@ -783,11 +786,21 @@
     top: 28vmin;
     left: 14vmin;
   }
-   .gift {
+  .gift {
       position: absolute;
       top: 69vmin;
       right: 20vmin;
-    }
+  }
+  .lightrope-tree {
+    left: 25em;
+    top: 2.9em; 
+  }
+  .lightrope-tree__container {
+    width: 30vmin;
+    position:relative;
+    top: 0vmin;
+    left: -3vmin;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .tree { 
@@ -805,37 +818,12 @@
     top: 35vmin;
     left: 14vmin;
   }
-  .lightrope-tree {
-    -webkit-transform: translateY(-250%);
-    transform: translateY(-250%);
-    left: 62vmin;
-    top: 17vmin;
-    opacity: 1;
-  }
   .gift {
       position: absolute;
-      top: 68vmin;
+      top: 75vmin;
       right: 22vmin;
     }
-    .buttons__home {
-      width: 20em;
-      height: 3em;
-      right: 2vmin;
-      transform: translateY(0px);
-      animation: 
-        jumping 3s 6s ease-in-out forwards, 
-        lighting 3s 7s ease-in-out infinite;
-      @keyframes lighting {
-        0% {
-          background-color:$wave-2;
-        }
-        50% {
-          background: $wave-3;
-        }
-        100% {
-          background-color:$wave-2;
-        }
-      }
+  .buttons__home {
       @keyframes jumping {
         0% {
           transform: translateY(0%);
@@ -847,123 +835,101 @@
           transform: translateY(200px);
         }
         60% {
-          transform: translateY(400px);
+          transform: translateY(320px);
         }
         80% {
           transform: translateY(300px);
         }
         100% {
-          transform: translateY(620px) rotate(360deg);
+          transform: translateY(320px) rotate(360deg);
           width: 35vmin;
           height: 10vmin;
         }
       }
-    
-      &::after {
-      position:absolute;
-      content:'Адвент-календарь';
-      top:5px;
-      left:36px;
-      font-size: 18px;
-      opacity: 0;
-      }
-    }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .tree { 
-    width: 50vmin;
-    height: 50vmin;
-    position: absolute;
-    transform: translateY(-250%);
-    top: 1vmin;
-    left: 43vmin;
-  }
-  .santa {
-    width: 50vmin;
-    height: 50vmin;
-    position: absolute;
-    top: 30vmin;
-    left: 14vmin;
-  }
-  .lightrope-wall__container li {
-      position: relative;
-      animation-fill-mode: both;
-      animation-iteration-count: infinite;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: inline-block;
-      width: 5vmin;
-      height: 5vmin;
-      border-radius: 50%;
-      margin: 12px;
-      background: var(--dark-blue);
-      box-shadow: 0px 4.66667px 24px 3px var(--dark-blue);
-      animation: flash-1 2s infinite;
   }
   .lightrope-tree {
-    -webkit-transform: translateY(-250%);
-    transform: translateY(-250%);
-    left: 60vmin;
-    top: 10vmin;
-    opacity: 1;
+    left: 59vmin;
+    top: 3vmin;
   }
+  .lightrope-tree__container {
+    width: 30vmin;
+    height: 8vmin;
+    position: relative;
+    top: 1vmin;
+    left: -3vmin;
+  }
+}
+@media (max-width:991px) and (min-width:768px) {
   .gift {
-      position: absolute;
-      top: 67vmin;
-      right: 15vmin;
+    position: absolute;
+    top: 104vmin;
+    right: 15vmin;
+  }
+  .tree { 
+    width: 126vmin;
+    height: 98vmin;
+  }
+  .lightrope-tree {
+    width: 30vmin;
+    height: 8vmin;
+    position: relative;
+    top: 31vmin;
+    left: 57vmin;
+  }
+
+  .lightrope-tree__item:nth-child(1) {
+    top: 48vmin;
+    left: -2vmin;
+  }
+  .lightrope-tree__item:nth-child(2) {
+    top: 51vmin;
+    left: 11vmin;
+  }
+  .lightrope-tree__item:nth-child(3) {
+    top: 33vmin;
+    left: 6vmin;
+  }
+  .lightrope-tree__item:nth-child(4) {
+    top: 29vmin;
+  }
+  .lightrope-tree__item:nth-child(5) {
+    top: 16vmin;
+    left: 4vmin;
+  }
+  .lightrope-tree__item:nth-child(6) {
+    top: 28vmin;
+  }
+  .lightrope-tree__item:nth-child(7) {
+    top: 44vmin;
+  }
+  .lightrope-tree__item:nth-child(8) {
+    left: 9vmin;
+    top: 12vmin
+  }
+  .buttons__home {
+    @keyframes jumping {
+      0% {
+        transform: translateY(0%);
+      }
+      20% {
+        transform: translateY(400px);
+      }
+      40% {
+        transform: translateY(200px);
+      }
+      60% {
+        transform: translateY(700px);
+      }
+      80% {
+        transform: translateY(300px);
+      }
+      100% {
+        transform: translateY(730px) rotate(360deg);
+        width: 35vmin;
+        height: 10vmin;
+      }
     }
-    .buttons__home {
-      width: 20em;
-      height: 3em;
-      right: 2vmin;
-      transform: translateY(0px);
-      animation: 
-        jumping 3s 6s ease-in-out forwards, 
-        lighting 3s 7s ease-in-out infinite;
-      @keyframes lighting {
-        0% {
-          background-color:$wave-2;
-        }
-        50% {
-          background: $wave-3;
-        }
-        100% {
-          background-color:$wave-2;
-        }
-      }
-      @keyframes jumping {
-        0% {
-          transform: translateY(0%);
-        }
-        20% {
-          transform: translateY(400px);
-        }
-        40% {
-          transform: translateY(200px);
-        }
-        60% {
-          transform: translateY(400px);
-        }
-        80% {
-          transform: translateY(300px);
-        }
-        100% {
-          transform: translateY(600px) rotate(360deg);
-          width: 35vmin;
-          height: 10vmin;
-        }
-      }
-    
-      &::after {
-      position:absolute;
-      content:'Адвент-календарь';
-      top:5px;
-      left:36px;
-      font-size: 18px;
-      opacity: 0;
-      }
-    }
+  }
 }
 @media (max-width: 767px) and (min-width:650px) {
   .tree { 
@@ -983,35 +949,50 @@
     left: 14vmin;
   }
   .lightrope-tree {
-    transform: translateY(-250%);
-    left: 55vmin;
-    top: 7vmin;
-    opacity: 1;
+    left: 52vmin;
+    top: 1vmin;
   }
-    .gift {
+  .lightrope-tree__container {
+    top: 18vmin;
+    left: 1vmin;
+  }
+  .lightrope-tree__item:nth-child(1) {
+    top: 48vmin;
+    left: -2vmin;
+  }
+  .lightrope-tree__item:nth-child(2) {
+    top: 47vmin;
+    left: 12vmin;
+  }
+  .lightrope-tree__item:nth-child(3) {
+    top: 33vmin;
+    left: 6vmin;
+  }
+  .lightrope-tree__item:nth-child(4) {
+    top: 24vmin;
+  }
+  .lightrope-tree__item:nth-child(5) {
+    top: 16vmin;
+    left: 4vmin;
+  }
+  .lightrope-tree__item:nth-child(6) {
+    top: 32vmin;
+    left: 0vmin;
+  }
+  .lightrope-tree__item:nth-child(7) {
+    top: 44vmin;
+  }
+  .lightrope-tree__item:nth-child(8) {
+    left: 9vmin;
+    top: 12vmin
+  }
+  .gift {
       position: absolute;
-      top: 73vmin;
-      right: 15vmin;
-    }
-    .buttons__home {
-      width: 20em;
-      height: 3em;
-      right: 2vmin;
-      transform: translateY(0px);
-      animation: 
-        jumping 3s 6s ease-in-out forwards, 
-        lighting 3s 7s ease-in-out infinite;
-      @keyframes lighting {
-        0% {
-          background-color:$wave-2;
-        }
-        50% {
-          background: $wave-3;
-        }
-        100% {
-          background-color:$wave-2;
-        }
-      }
+      top: 80vmin;
+      right: 78vmin;
+  }
+  .buttons__home {
+     
       @keyframes jumping {
         0% {
           transform: translateY(0%);
@@ -1029,62 +1010,36 @@
           transform: translateY(300px);
         }
         100% {
-          transform: translateY(600px) rotate(360deg);
+          transform: translateY(500px) rotate(360deg);
           width: 35vmin;
           height: 10vmin;
         }
       }
-    
-      &::after {
-      position:absolute;
-      content:'Адвент-календарь';
-      top:5px;
-      left:36px;
-      font-size: 18px;
-      opacity: 0;
-      }
-    }
+  }
 }
+
 @media(max-width:650px) and (min-width: 481px) {
-      .tree { 
+  .tree { 
         width: 50vmin;
           height: 50vmin;
           position: absolute;
           transform: translateY(-250%);
           top: 16vmin;
           left: 38vmin;
-      }
-      .santa {
+  }
+  .santa {
         width: 50vmin;
         height: 50vmin;
         position: absolute;
         top: 40vmin;
         left: 14vmin;
-      }
-      .gift {
+  }
+  .gift {
         position: absolute;
-        top: 93vmin;
-        right: 72vmin;
-      }
-      .buttons__home {
-        width: 20em;
-        height: 3em;
-        right: 2vmin;
-        transform: translateY(0px);
-        animation: 
-          jumping 3s 6s ease-in-out forwards, 
-          lighting 3s 7s ease-in-out infinite;
-        @keyframes lighting {
-          0% {
-            background-color:$wave-2;
-          }
-          50% {
-            background: $wave-3;
-          }
-          100% {
-            background-color:$wave-2;
-          }
-        }
+        top: 90vmin;
+        right: 78vmin;
+  }
+  .buttons__home {
         @keyframes jumping {
           0% {
             transform: translateY(0%);
@@ -1102,47 +1057,45 @@
             transform: translateY(300px);
           }
           100% {
-            transform: translateY(600px) rotate(360deg);
+            transform: translateY(500px) rotate(360deg);
             width: 35vmin;
             height: 10vmin;
           }
         }
-      
-        &::after {
-        position:absolute;
-        content:'Адвент-календарь';
-        top:5px;
-        left:36px;
-        font-size: 18px;
-        opacity: 0;
-        }
-      }
-}
-  @media (max-width: 480px) {
-  .tree { 
-    width: 50vmin;
-    height: 50vmin;
-    position: absolute;
-    transform: translateY(-250%);
-    top: 40vmin;
-    left: 35vmin;
-  }
-  .santa {
-    width: 50vmin;
-    height: 50vmin;
-    position: absolute;
-    top: 65vmin;
-    left: 14vmin;
   }
   .lightrope-tree {
-    transform: translateY(-250%);
-    left: 47vmin;
-    top: 10vmin;
-    opacity: 1;
+    left: 56vmin;
+    top: 30.8vmin;
   }
-    .gift {
-      position: absolute;
-      top: 112vmin;
-      right: 78vmin;
-    }
+  .lightrope-tree__item:nth-child(1) {
+    top: 48vmin;
+    left: -2vmin;
+  }
+  .lightrope-tree__item:nth-child(2) {
+    top: 48vmin;
+    left: 13vmin;
+
+  }
+  .lightrope-tree__item:nth-child(3) {
+    top: 31vmin;
+    left: 9vmin;
+  }
+  .lightrope-tree__item:nth-child(4) {
+    top: 25vmin;
+  }
+  .lightrope-tree__item:nth-child(5) {
+    top: 16vmin;
+    left: 4vmin;
+  }
+  .lightrope-tree__item:nth-child(6) {
+    top: 33vmin;
+    left: 0vmin;
+  }
+  .lightrope-tree__item:nth-child(7) {
+    top: 44vmin;
+  }
+  .lightrope-tree__item:nth-child(8) {
+    left: 9vmin;
+    top: 12vmin
+  }
 }
