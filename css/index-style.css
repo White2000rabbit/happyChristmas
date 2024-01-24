@@ -1537,7 +1537,7 @@ nav, footer, header {
     }
   }
 }
-@media (max-width: 650px) and (min-width: 481px) and (orientation: portrait) {
+@media (max-width: 650px) and (orientation: portrait) {
   .tree {
     width: 50vmin;
     height: 50vmin;
@@ -1557,7 +1557,7 @@ nav, footer, header {
   .gift {
     position: absolute;
     top: 90vmin;
-    right: 78vmin;
+    right: 70vmin;
   }
   @-webkit-keyframes jumping {
     0% {

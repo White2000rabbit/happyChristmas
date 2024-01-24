@@ -1045,7 +1045,7 @@
       }
   }
 }
-@media(max-width:650px) and (min-width: 481px) and (orientation:portrait) {
+@media(max-width:650px) and (orientation:portrait) {
   .tree { 
         width: 50vmin;
           height: 50vmin;
@@ -1064,7 +1064,7 @@
   .gift {
         position: absolute;
         top: 90vmin;
-        right: 78vmin;
+        right: 70vmin;
   }
   .buttons__home {
         @keyframes jumping {
