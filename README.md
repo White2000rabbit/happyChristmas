@@ -5,7 +5,7 @@
 
 ##  Используемые технологии 
 CSS, HTML, java-Script
-##  Cкриншоты:
+## Скриншоты:
 ### Главный экран
 ![лл](https://github.com/White2000rabbit/happyChristmas/assets/121927745/10785976-a5df-41a3-9411-15e8ff0bd7a1)
 ![Сни5мок](https://github.com/White2000rabbit/happyChristmas/assets/121927745/00536470-4c54-4880-a1d9-3360e31e9a68)
