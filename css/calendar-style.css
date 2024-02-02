@@ -376,353 +376,353 @@ nav, footer, header {
 }
 
 .snowflake:nth-child(1) {
-  --size: 1vw;
-  left: 66vw;
-  -webkit-animation: snowfall 8s linear infinite;
-          animation: snowfall 8s linear infinite;
+  --size: 0.2vw;
+  left: 33vw;
+  -webkit-animation: snowfall 14s linear infinite;
+          animation: snowfall 14s linear infinite;
 }
 
 .snowflake:nth-child(2) {
-  --size: 0.2vw;
-  left: 13vw;
-  -webkit-animation: snowfall 6s linear infinite;
-          animation: snowfall 6s linear infinite;
+  --size: 1vw;
+  left: 67vw;
+  -webkit-animation: snowfall 11s linear infinite;
+          animation: snowfall 11s linear infinite;
 }
 
 .snowflake:nth-child(3) {
-  --size: 1vw;
-  left: 66vw;
+  --size: 0.6vw;
+  left: 35vw;
   -webkit-animation: snowfall 15s linear infinite;
           animation: snowfall 15s linear infinite;
 }
 
 .snowflake:nth-child(4) {
-  --size: 0.4vw;
-  left: 31vw;
-  -webkit-animation: snowfall 7s linear infinite;
-          animation: snowfall 7s linear infinite;
-}
-
-.snowflake:nth-child(5) {
-  --size: 0.4vw;
-  left: 22vw;
-  -webkit-animation: snowfall 13s linear infinite;
-          animation: snowfall 13s linear infinite;
-}
-
-.snowflake:nth-child(6) {
-  --size: 0.6vw;
-  left: 5vw;
-  -webkit-animation: snowfall 6s linear infinite;
-          animation: snowfall 6s linear infinite;
-}
-
-.snowflake:nth-child(7) {
-  --size: 1vw;
-  left: 85vw;
+  --size: 0.8vw;
+  left: 4vw;
   -webkit-animation: snowfall 8s linear infinite;
           animation: snowfall 8s linear infinite;
 }
 
+.snowflake:nth-child(5) {
+  --size: 0.4vw;
+  left: 85vw;
+  -webkit-animation: snowfall 10s linear infinite;
+          animation: snowfall 10s linear infinite;
+}
+
+.snowflake:nth-child(6) {
+  --size: 1vw;
+  left: 20vw;
+  -webkit-animation: snowfall 11s linear infinite;
+          animation: snowfall 11s linear infinite;
+}
+
+.snowflake:nth-child(7) {
+  --size: 0.4vw;
+  left: 74vw;
+  -webkit-animation: snowfall 6s linear infinite;
+          animation: snowfall 6s linear infinite;
+}
+
 .snowflake:nth-child(8) {
-  --size: 0.8vw;
-  left: 9vw;
+  --size: 0.2vw;
+  left: 95vw;
   -webkit-animation: snowfall 8s linear infinite;
           animation: snowfall 8s linear infinite;
 }
 
 .snowflake:nth-child(9) {
-  --size: 0.8vw;
-  left: 4vw;
-  -webkit-animation: snowfall 6s linear infinite;
-          animation: snowfall 6s linear infinite;
+  --size: 1vw;
+  left: 16vw;
+  -webkit-animation: snowfall 7s linear infinite;
+          animation: snowfall 7s linear infinite;
 }
 
 .snowflake:nth-child(10) {
-  --size: 0.8vw;
-  left: 84vw;
+  --size: 0.6vw;
+  left: 11vw;
   -webkit-animation: snowfall 14s linear infinite;
           animation: snowfall 14s linear infinite;
 }
 
 .snowflake:nth-child(11) {
-  --size: 0.8vw;
-  left: 34vw;
-  -webkit-animation: snowfall 15s linear infinite;
-          animation: snowfall 15s linear infinite;
+  --size: 1vw;
+  left: 51vw;
+  -webkit-animation: snowfall 13s linear infinite;
+          animation: snowfall 13s linear infinite;
 }
 
 .snowflake:nth-child(12) {
-  --size: 0.4vw;
-  left: 56vw;
-  -webkit-animation: snowfall 11s linear infinite;
-          animation: snowfall 11s linear infinite;
+  --size: 0.6vw;
+  left: 50vw;
+  -webkit-animation: snowfall 9s linear infinite;
+          animation: snowfall 9s linear infinite;
 }
 
 .snowflake:nth-child(13) {
   --size: 0.6vw;
-  left: 52vw;
+  left: 49vw;
   -webkit-animation: snowfall 13s linear infinite;
           animation: snowfall 13s linear infinite;
 }
 
 .snowflake:nth-child(14) {
   --size: 0.4vw;
-  left: 98vw;
-  -webkit-animation: snowfall 9s linear infinite;
-          animation: snowfall 9s linear infinite;
+  left: 45vw;
+  -webkit-animation: snowfall 10s linear infinite;
+          animation: snowfall 10s linear infinite;
 }
 
 .snowflake:nth-child(15) {
-  --size: 1vw;
-  left: 65vw;
-  -webkit-animation: snowfall 14s linear infinite;
-          animation: snowfall 14s linear infinite;
+  --size: 0.2vw;
+  left: 78vw;
+  -webkit-animation: snowfall 15s linear infinite;
+          animation: snowfall 15s linear infinite;
 }
 
 .snowflake:nth-child(16) {
   --size: 0.8vw;
-  left: 66vw;
+  left: 57vw;
+  -webkit-animation: snowfall 10s linear infinite;
+          animation: snowfall 10s linear infinite;
+}
+
+.snowflake:nth-child(17) {
+  --size: 0.4vw;
+  left: 46vw;
   -webkit-animation: snowfall 7s linear infinite;
           animation: snowfall 7s linear infinite;
 }
 
-.snowflake:nth-child(17) {
-  --size: 0.8vw;
-  left: 51vw;
-  -webkit-animation: snowfall 8s linear infinite;
-          animation: snowfall 8s linear infinite;
-}
-
 .snowflake:nth-child(18) {
-  --size: 1vw;
-  left: 93vw;
-  -webkit-animation: snowfall 9s linear infinite;
-          animation: snowfall 9s linear infinite;
+  --size: 0.4vw;
+  left: 81vw;
+  -webkit-animation: snowfall 15s linear infinite;
+          animation: snowfall 15s linear infinite;
 }
 
 .snowflake:nth-child(19) {
-  --size: 1vw;
-  left: 79vw;
-  -webkit-animation: snowfall 6s linear infinite;
-          animation: snowfall 6s linear infinite;
+  --size: 0.6vw;
+  left: 67vw;
+  -webkit-animation: snowfall 15s linear infinite;
+          animation: snowfall 15s linear infinite;
 }
 
 .snowflake:nth-child(20) {
-  --size: 0.4vw;
-  left: 56vw;
-  -webkit-animation: snowfall 9s linear infinite;
-          animation: snowfall 9s linear infinite;
+  --size: 0.8vw;
+  left: 47vw;
+  -webkit-animation: snowfall 15s linear infinite;
+          animation: snowfall 15s linear infinite;
 }
 
 .snowflake:nth-child(21) {
-  --size: 0.6vw;
-  left: 76vw;
-  -webkit-animation: snowfall 8s linear infinite;
-          animation: snowfall 8s linear infinite;
-}
-
-.snowflake:nth-child(22) {
   --size: 0.4vw;
-  left: 98vw;
-  -webkit-animation: snowfall 12s linear infinite;
-          animation: snowfall 12s linear infinite;
-}
-
-.snowflake:nth-child(23) {
-  --size: 0.2vw;
-  left: 59vw;
-  -webkit-animation: snowfall 12s linear infinite;
-          animation: snowfall 12s linear infinite;
-}
-
-.snowflake:nth-child(24) {
-  --size: 0.2vw;
-  left: 65vw;
-  -webkit-animation: snowfall 8s linear infinite;
-          animation: snowfall 8s linear infinite;
-}
-
-.snowflake:nth-child(25) {
-  --size: 0.8vw;
-  left: 56vw;
+  left: 55vw;
   -webkit-animation: snowfall 9s linear infinite;
           animation: snowfall 9s linear infinite;
 }
 
-.snowflake:nth-child(26) {
+.snowflake:nth-child(22) {
   --size: 0.2vw;
-  left: 21vw;
-  -webkit-animation: snowfall 6s linear infinite;
-          animation: snowfall 6s linear infinite;
+  left: 70vw;
+  -webkit-animation: snowfall 8s linear infinite;
+          animation: snowfall 8s linear infinite;
+}
+
+.snowflake:nth-child(23) {
+  --size: 0.6vw;
+  left: 2vw;
+  -webkit-animation: snowfall 9s linear infinite;
+          animation: snowfall 9s linear infinite;
+}
+
+.snowflake:nth-child(24) {
+  --size: 0.8vw;
+  left: 93vw;
+  -webkit-animation: snowfall 15s linear infinite;
+          animation: snowfall 15s linear infinite;
+}
+
+.snowflake:nth-child(25) {
+  --size: 0.2vw;
+  left: 90vw;
+  -webkit-animation: snowfall 7s linear infinite;
+          animation: snowfall 7s linear infinite;
+}
+
+.snowflake:nth-child(26) {
+  --size: 0.8vw;
+  left: 14vw;
+  -webkit-animation: snowfall 15s linear infinite;
+          animation: snowfall 15s linear infinite;
 }
 
 .snowflake:nth-child(27) {
-  --size: 0.2vw;
-  left: 13vw;
+  --size: 0.4vw;
+  left: 87vw;
   -webkit-animation: snowfall 6s linear infinite;
           animation: snowfall 6s linear infinite;
 }
 
 .snowflake:nth-child(28) {
   --size: 1vw;
-  left: 46vw;
+  left: 18vw;
+  -webkit-animation: snowfall 13s linear infinite;
+          animation: snowfall 13s linear infinite;
+}
+
+.snowflake:nth-child(29) {
+  --size: 0.6vw;
+  left: 23vw;
+  -webkit-animation: snowfall 7s linear infinite;
+          animation: snowfall 7s linear infinite;
+}
+
+.snowflake:nth-child(30) {
+  --size: 0.6vw;
+  left: 9vw;
+  -webkit-animation: snowfall 10s linear infinite;
+          animation: snowfall 10s linear infinite;
+}
+
+.snowflake:nth-child(31) {
+  --size: 0.6vw;
+  left: 76vw;
   -webkit-animation: snowfall 9s linear infinite;
           animation: snowfall 9s linear infinite;
 }
 
-.snowflake:nth-child(29) {
-  --size: 0.8vw;
-  left: 31vw;
-  -webkit-animation: snowfall 11s linear infinite;
-          animation: snowfall 11s linear infinite;
-}
-
-.snowflake:nth-child(30) {
-  --size: 1vw;
-  left: 89vw;
-  -webkit-animation: snowfall 8s linear infinite;
-          animation: snowfall 8s linear infinite;
-}
-
-.snowflake:nth-child(31) {
-  --size: 0.8vw;
-  left: 19vw;
-  -webkit-animation: snowfall 8s linear infinite;
-          animation: snowfall 8s linear infinite;
-}
-
 .snowflake:nth-child(32) {
-  --size: 0.2vw;
-  left: 3vw;
-  -webkit-animation: snowfall 15s linear infinite;
-          animation: snowfall 15s linear infinite;
+  --size: 1vw;
+  left: 86vw;
+  -webkit-animation: snowfall 7s linear infinite;
+          animation: snowfall 7s linear infinite;
 }
 
 .snowflake:nth-child(33) {
-  --size: 0.4vw;
-  left: 73vw;
-  -webkit-animation: snowfall 14s linear infinite;
-          animation: snowfall 14s linear infinite;
-}
-
-.snowflake:nth-child(34) {
-  --size: 1vw;
-  left: 97vw;
-  -webkit-animation: snowfall 14s linear infinite;
-          animation: snowfall 14s linear infinite;
-}
-
-.snowflake:nth-child(35) {
-  --size: 0.6vw;
-  left: 51vw;
+  --size: 0.8vw;
+  left: 90vw;
   -webkit-animation: snowfall 11s linear infinite;
           animation: snowfall 11s linear infinite;
 }
 
+.snowflake:nth-child(34) {
+  --size: 0.8vw;
+  left: 89vw;
+  -webkit-animation: snowfall 6s linear infinite;
+          animation: snowfall 6s linear infinite;
+}
+
+.snowflake:nth-child(35) {
+  --size: 0.4vw;
+  left: 37vw;
+  -webkit-animation: snowfall 13s linear infinite;
+          animation: snowfall 13s linear infinite;
+}
+
 .snowflake:nth-child(36) {
-  --size: 0.6vw;
-  left: 74vw;
-  -webkit-animation: snowfall 14s linear infinite;
-          animation: snowfall 14s linear infinite;
+  --size: 0.8vw;
+  left: 27vw;
+  -webkit-animation: snowfall 10s linear infinite;
+          animation: snowfall 10s linear infinite;
 }
 
 .snowflake:nth-child(37) {
   --size: 0.2vw;
-  left: 64vw;
-  -webkit-animation: snowfall 9s linear infinite;
-          animation: snowfall 9s linear infinite;
+  left: 29vw;
+  -webkit-animation: snowfall 10s linear infinite;
+          animation: snowfall 10s linear infinite;
 }
 
 .snowflake:nth-child(38) {
-  --size: 0.2vw;
-  left: 53vw;
-  -webkit-animation: snowfall 7s linear infinite;
-          animation: snowfall 7s linear infinite;
+  --size: 1vw;
+  left: 90vw;
+  -webkit-animation: snowfall 10s linear infinite;
+          animation: snowfall 10s linear infinite;
 }
 
 .snowflake:nth-child(39) {
   --size: 0.2vw;
-  left: 95vw;
-  -webkit-animation: snowfall 7s linear infinite;
-          animation: snowfall 7s linear infinite;
+  left: 12vw;
+  -webkit-animation: snowfall 14s linear infinite;
+          animation: snowfall 14s linear infinite;
 }
 
 .snowflake:nth-child(40) {
-  --size: 0.8vw;
-  left: 47vw;
+  --size: 0.6vw;
+  left: 91vw;
   -webkit-animation: snowfall 7s linear infinite;
           animation: snowfall 7s linear infinite;
 }
 
 .snowflake:nth-child(41) {
   --size: 0.8vw;
-  left: 95vw;
-  -webkit-animation: snowfall 15s linear infinite;
-          animation: snowfall 15s linear infinite;
+  left: 97vw;
+  -webkit-animation: snowfall 14s linear infinite;
+          animation: snowfall 14s linear infinite;
 }
 
 .snowflake:nth-child(42) {
-  --size: 0.8vw;
-  left: 63vw;
-  -webkit-animation: snowfall 13s linear infinite;
-          animation: snowfall 13s linear infinite;
+  --size: 0.4vw;
+  left: 8vw;
+  -webkit-animation: snowfall 15s linear infinite;
+          animation: snowfall 15s linear infinite;
 }
 
 .snowflake:nth-child(43) {
   --size: 1vw;
-  left: 74vw;
-  -webkit-animation: snowfall 8s linear infinite;
-          animation: snowfall 8s linear infinite;
+  left: 14vw;
+  -webkit-animation: snowfall 7s linear infinite;
+          animation: snowfall 7s linear infinite;
 }
 
 .snowflake:nth-child(44) {
-  --size: 0.8vw;
-  left: 12vw;
-  -webkit-animation: snowfall 6s linear infinite;
-          animation: snowfall 6s linear infinite;
-}
-
-.snowflake:nth-child(45) {
-  --size: 1vw;
-  left: 66vw;
-  -webkit-animation: snowfall 15s linear infinite;
-          animation: snowfall 15s linear infinite;
-}
-
-.snowflake:nth-child(46) {
-  --size: 0.2vw;
-  left: 100vw;
-  -webkit-animation: snowfall 9s linear infinite;
-          animation: snowfall 9s linear infinite;
-}
-
-.snowflake:nth-child(47) {
-  --size: 0.4vw;
-  left: 66vw;
-  -webkit-animation: snowfall 12s linear infinite;
-          animation: snowfall 12s linear infinite;
-}
-
-.snowflake:nth-child(48) {
-  --size: 0.2vw;
-  left: 80vw;
-  -webkit-animation: snowfall 10s linear infinite;
-          animation: snowfall 10s linear infinite;
-}
-
-.snowflake:nth-child(49) {
-  --size: 0.4vw;
-  left: 100vw;
+  --size: 0.6vw;
+  left: 45vw;
   -webkit-animation: snowfall 11s linear infinite;
           animation: snowfall 11s linear infinite;
 }
 
-.snowflake:nth-child(50) {
+.snowflake:nth-child(45) {
+  --size: 1vw;
+  left: 31vw;
+  -webkit-animation: snowfall 11s linear infinite;
+          animation: snowfall 11s linear infinite;
+}
+
+.snowflake:nth-child(46) {
   --size: 0.8vw;
-  left: 13vw;
-  -webkit-animation: snowfall 7s linear infinite;
-          animation: snowfall 7s linear infinite;
+  left: 15vw;
+  -webkit-animation: snowfall 14s linear infinite;
+          animation: snowfall 14s linear infinite;
+}
+
+.snowflake:nth-child(47) {
+  --size: 0.8vw;
+  left: 86vw;
+  -webkit-animation: snowfall 9s linear infinite;
+          animation: snowfall 9s linear infinite;
+}
+
+.snowflake:nth-child(48) {
+  --size: 0.8vw;
+  left: 89vw;
+  -webkit-animation: snowfall 14s linear infinite;
+          animation: snowfall 14s linear infinite;
+}
+
+.snowflake:nth-child(49) {
+  --size: 0.8vw;
+  left: 86vw;
+  -webkit-animation: snowfall 12s linear infinite;
+          animation: snowfall 12s linear infinite;
+}
+
+.snowflake:nth-child(50) {
+  --size: 0.4vw;
+  left: 64vw;
+  -webkit-animation: snowfall 11s linear infinite;
+          animation: snowfall 11s linear infinite;
 }
 
 @-webkit-keyframes snowfall {
@@ -1379,8 +1379,8 @@ nav, footer, header {
     width: 100%;
     margin: 70% 5px 2rem 5px;
     padding: 0 40px;
-    -ms-grid-columns: 1fr 1em 1fr 1em 1fr 1em 1fr;
-    grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: 1fr 1em 1fr;
+    grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: auto;
     grid-template-rows: auto;
     grid-gap: 1em;
@@ -1389,10 +1389,10 @@ nav, footer, header {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-        grid-template-areas: "day12 day10 day8 day22" "day9 day24  day11 day3" "day29 day2 day13 day27" "day30 day18 day4 day26" "day20 day1 day7 day25" "day5 day14 day17 day28" "day16 day23 day6 day31" "day15 day21 day19 .";
+        grid-template-areas: "day12 day10" "day8 day22" "day9 day24" "day11 day3" "day29 day2" "day13 day27" "day30 day18" "day4 day26" "day20 day1" "day7 day25" "day5 day14" "day17 day28" "day16 day23" "day6 day31" "day15 day21" "day19 .";
   }
   .calendar__card {
-    min-width: 8rem;
+    min-width: 100%;
     min-height: 8rem;
     -webkit-perspective: 1000px;
             perspective: 1000px;
@@ -1409,39 +1409,39 @@ nav, footer, header {
     top: 32%;
   }
   .card--1 {
-    -ms-grid-row: 9;
+    -ms-grid-row: 17;
     -ms-grid-column: 3;
   }
   .card--2 {
-    -ms-grid-row: 5;
+    -ms-grid-row: 9;
     -ms-grid-column: 3;
   }
   .card--3 {
-    -ms-grid-row: 3;
-    -ms-grid-column: 7;
+    -ms-grid-row: 7;
+    -ms-grid-column: 3;
   }
   .card--4 {
-    -ms-grid-row: 7;
-    -ms-grid-column: 5;
+    -ms-grid-row: 15;
+    -ms-grid-column: 1;
   }
   .card--5 {
-    -ms-grid-row: 11;
+    -ms-grid-row: 21;
     -ms-grid-column: 1;
   }
   .card--6 {
-    -ms-grid-row: 13;
-    -ms-grid-column: 5;
+    -ms-grid-row: 27;
+    -ms-grid-column: 1;
   }
   .card--7 {
-    -ms-grid-row: 9;
-    -ms-grid-column: 5;
+    -ms-grid-row: 19;
+    -ms-grid-column: 1;
   }
   .card--8 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 5;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
   }
   .card--9 {
-    -ms-grid-row: 3;
+    -ms-grid-row: 5;
     -ms-grid-column: 1;
   }
   .card--10 {
@@ -1449,90 +1449,90 @@ nav, footer, header {
     -ms-grid-column: 3;
   }
   .card--11 {
-    -ms-grid-row: 3;
-    -ms-grid-column: 5;
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
   }
   .card--12 {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
   }
   .card--13 {
-    -ms-grid-row: 5;
-    -ms-grid-column: 5;
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
   }
   .card--14 {
-    -ms-grid-row: 11;
+    -ms-grid-row: 21;
     -ms-grid-column: 3;
   }
   .card--15 {
-    -ms-grid-row: 15;
+    -ms-grid-row: 29;
     -ms-grid-column: 1;
   }
   .card--16 {
-    -ms-grid-row: 13;
+    -ms-grid-row: 25;
     -ms-grid-column: 1;
   }
   .card--17 {
-    -ms-grid-row: 11;
-    -ms-grid-column: 5;
-  }
-  .card--18 {
-    -ms-grid-row: 7;
-    -ms-grid-column: 3;
-  }
-  .card--19 {
-    -ms-grid-row: 15;
-    -ms-grid-column: 5;
-  }
-  .card--20 {
-    -ms-grid-row: 9;
+    -ms-grid-row: 23;
     -ms-grid-column: 1;
   }
-  .card--21 {
-    -ms-grid-row: 15;
-    -ms-grid-column: 3;
-  }
-  .card--22 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 7;
-  }
-  .card--23 {
+  .card--18 {
     -ms-grid-row: 13;
     -ms-grid-column: 3;
   }
-  .card--24 {
+  .card--19 {
+    -ms-grid-row: 31;
+    -ms-grid-column: 1;
+  }
+  .card--20 {
+    -ms-grid-row: 17;
+    -ms-grid-column: 1;
+  }
+  .card--21 {
+    -ms-grid-row: 29;
+    -ms-grid-column: 3;
+  }
+  .card--22 {
     -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .card--23 {
+    -ms-grid-row: 25;
+    -ms-grid-column: 3;
+  }
+  .card--24 {
+    -ms-grid-row: 5;
     -ms-grid-row-span: 1;
     -ms-grid-column: 3;
     -ms-grid-column-span: 1;
   }
   .card--25 {
-    -ms-grid-row: 9;
-    -ms-grid-column: 7;
+    -ms-grid-row: 19;
+    -ms-grid-column: 3;
   }
   .card--26 {
-    -ms-grid-row: 7;
-    -ms-grid-column: 7;
+    -ms-grid-row: 15;
+    -ms-grid-column: 3;
   }
   .card--27 {
-    -ms-grid-row: 5;
-    -ms-grid-column: 7;
+    -ms-grid-row: 11;
+    -ms-grid-column: 3;
     -ms-grid-column-span: 1;
   }
   .card--28 {
-    -ms-grid-row: 11;
-    -ms-grid-column: 7;
+    -ms-grid-row: 23;
+    -ms-grid-column: 3;
   }
   .card--29 {
-    -ms-grid-row: 5;
+    -ms-grid-row: 9;
     -ms-grid-column: 1;
   }
   .card--30 {
-    -ms-grid-row: 7;
+    -ms-grid-row: 13;
     -ms-grid-column: 1;
   }
   .card--31 {
-    -ms-grid-row: 13;
-    -ms-grid-column: 7;
+    -ms-grid-row: 27;
+    -ms-grid-column: 3;
   }
 }

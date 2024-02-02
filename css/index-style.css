@@ -185,28 +185,8 @@ nav, footer, header {
     opacity: 5;
   }
 }
-@keyframes isVisible {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 5;
-  }
-}
+
 @-webkit-keyframes lights-fall {
-  0% {
-    -webkit-transform: translateY(-150vh);
-            transform: translateY(-150vh);
-  }
-  100% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-}
-@keyframes lights-fall {
   0% {
     -webkit-transform: translateY(-150vh);
             transform: translateY(-150vh);
@@ -283,44 +263,16 @@ nav, footer, header {
   100% {
     -webkit-transform: translateY(400px) rotate(360deg);
             transform: translateY(400px) rotate(360deg);
-    width: 35vmin;
-    height: 10vmin;
-  }
-}
-@keyframes jumping {
-  0% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-  20% {
-    -webkit-transform: translateY(400px);
-            transform: translateY(400px);
-  }
-  40% {
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
-  }
-  60% {
-    -webkit-transform: translateY(400px);
-            transform: translateY(400px);
-  }
-  80% {
-    -webkit-transform: translateY(300px);
-            transform: translateY(300px);
-  }
-  100% {
-    -webkit-transform: translateY(400px) rotate(360deg);
-            transform: translateY(400px) rotate(360deg);
-    width: 35vmin;
-    height: 10vmin;
+    width: 44vmin;
+    height: 25vmin;
   }
 }
 .buttons__home::after {
   position: absolute;
   content: "Адвент-календарь";
-  top: 5px;
+  top: 10px;
   left: 36px;
-  font-size: 18px;
+  font-size: 1em;
   opacity: 0;
 }
 
@@ -1163,62 +1115,6 @@ nav, footer, header {
     top: 0vmin;
     left: -3vmin;
   }
-  @-webkit-keyframes jumping {
-    0% {
-      -webkit-transform: translateY(0%);
-              transform: translateY(0%);
-    }
-    20% {
-      -webkit-transform: translateY(400px);
-              transform: translateY(400px);
-    }
-    40% {
-      -webkit-transform: translateY(200px);
-              transform: translateY(200px);
-    }
-    60% {
-      -webkit-transform: translateY(220px);
-              transform: translateY(220px);
-    }
-    80% {
-      -webkit-transform: translateY(300px);
-              transform: translateY(300px);
-    }
-    100% {
-      -webkit-transform: translateY(220px) rotate(360deg);
-              transform: translateY(220px) rotate(360deg);
-      width: 35vmin;
-      height: 10vmin;
-    }
-  }
-  @keyframes jumping {
-    0% {
-      -webkit-transform: translateY(0%);
-              transform: translateY(0%);
-    }
-    20% {
-      -webkit-transform: translateY(400px);
-              transform: translateY(400px);
-    }
-    40% {
-      -webkit-transform: translateY(200px);
-              transform: translateY(200px);
-    }
-    60% {
-      -webkit-transform: translateY(220px);
-              transform: translateY(220px);
-    }
-    80% {
-      -webkit-transform: translateY(300px);
-              transform: translateY(300px);
-    }
-    100% {
-      -webkit-transform: translateY(220px) rotate(360deg);
-              transform: translateY(220px) rotate(360deg);
-      width: 35vmin;
-      height: 10vmin;
-    }
-  }
 }
 @media (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
   .tree {
@@ -1559,62 +1455,7 @@ nav, footer, header {
     top: 90vmin;
     right: 70vmin;
   }
-  @-webkit-keyframes jumping {
-    0% {
-      -webkit-transform: translateY(0%);
-              transform: translateY(0%);
-    }
-    20% {
-      -webkit-transform: translateY(400px);
-              transform: translateY(400px);
-    }
-    40% {
-      -webkit-transform: translateY(200px);
-              transform: translateY(200px);
-    }
-    60% {
-      -webkit-transform: translateY(400px);
-              transform: translateY(400px);
-    }
-    80% {
-      -webkit-transform: translateY(300px);
-              transform: translateY(300px);
-    }
-    100% {
-      -webkit-transform: translateY(400px) rotate(360deg);
-              transform: translateY(400px) rotate(360deg);
-      width: 35vmin;
-      height: 10vmin;
-    }
-  }
-  @keyframes jumping {
-    0% {
-      -webkit-transform: translateY(0%);
-              transform: translateY(0%);
-    }
-    20% {
-      -webkit-transform: translateY(400px);
-              transform: translateY(400px);
-    }
-    40% {
-      -webkit-transform: translateY(200px);
-              transform: translateY(200px);
-    }
-    60% {
-      -webkit-transform: translateY(400px);
-              transform: translateY(400px);
-    }
-    80% {
-      -webkit-transform: translateY(300px);
-              transform: translateY(300px);
-    }
-    100% {
-      -webkit-transform: translateY(400px) rotate(360deg);
-              transform: translateY(400px) rotate(360deg);
-      width: 35vmin;
-      height: 10vmin;
-    }
-  }
+
   .lightrope-tree {
     left: 56vmin;
     top: 30.8vmin;
