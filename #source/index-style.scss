@@ -91,7 +91,7 @@
       transform: translateY(300px);
     }
     100% {
-      transform: translateY(400px) rotate(360deg);
+      transform: translateY(320px) rotate(360deg);
       width: 35vmin;
       height: 10vmin;
     }
@@ -805,8 +805,8 @@
     height: 50vmin;
     position: absolute;
     transform: translateY(-250%);
-    top: 10vmin;
-    left: 25vmax;
+    left: 61vmin;
+    top: -1vmin;
   }
   .santa {
     width: 50vmin;
